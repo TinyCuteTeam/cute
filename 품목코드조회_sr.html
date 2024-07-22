@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .sr_top {
+        display: flex;
+        width: 500px;
+    }
+
+    .sr_edit {
+        display: inline-block;
+        width: 150px;
+    }
+
+    .sr_grey {
+        /* 회색배경 */
+        background-color: #d0cbcb;
+        width: 1000px;
+        height: 700px;
+    }
+
+    table {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sr_hover:hover {
+        content: url('https://www.qrcode.com/en/img/model12/model1Image.png');
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        width: 800px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .flex>div {
+        flex: 1;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .round {
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-bottom: 30px;
+    }
+
+    .sr_icon{
+        width:20px;
+    }
+
+    .sr_qrimg:hover {
+        content: url('https://www.qrcode.com/en/img/model12/model1Image.png');
+    }
+</style>
+
+<body>
+    <div class="sr_top">
+        <h1>품목코드 표</h1>
+
+        <div class="sr_edit">
+            <!-- <div> -->
+            <button>추가</button>
+            <!-- <button>수정</button>
+            <button>삭제</button> -->
+        </div>
+    </div>
+
+    <!-- 회색배경 -->
+    <div class="sr_grey">
+        <!-- 마우스 올라가면 QR코드 나오게 할 예정 -->
+        <div>
+            <!--작성 칸? -->
+            <table>
+                <tr>
+                    <td><strong>품목코드</strong></td>
+                    <td><strong>품목명</strong></td>
+                    <td><strong>바코드</strong></td>
+                </tr>
+                <tr>
+                    <td>M001</td>
+                    <td>밀가루</td>
+                    <td class="sr_hover"><button> QR </button></td>
+
+                </tr>
+                <tr>
+                    <td>M002</td>
+                    <td>물</td>
+                    <td class="sr_hover"><button> QR </button></td>
+                </tr>
+                <tr>
+                    <td>M003</td>
+                    <td>소금</td>
+                    <td class="sr_hover"><button> QR </button></td>
+                </tr>
+                <tr>
+                    <td>M004</td>
+                    <td>다진 돼지고기</td>
+                    <td class="sr_hover"><button> QR </button></td>
+                </tr>
+                <tr>
+                    <td>M005</td>
+                    <td>다진 양파</td>
+                    <td class="sr_hover"><button> QR </button></td>
+                </tr>
+                <tr>
+                    <td>M006</td>
+                    <td>대파</td>
+                    <td class="sr_hover"><button> QR </button></td>
+                </tr>
+                <tr>
+                    <td>M007</td>
+                    <td>간장</td>
+                    <td class="sr_hover"><button> QR </button></td>
+                </tr>
+                <tr>
+                    <td>M008</td>
+                    <td>참기름</td>
+                    <td class="sr_hover"><button> QR </button></td>
+                </tr>
+                <tr>
+                    <td>M009</td>
+                    <td>후추</td>
+                    <td class="sr_hover"><button> QR </button></td>
+                </tr>
+                <tr>
+                    <td>M010</td>
+                    <td>마늘</td>
+                    <td class="sr_hover"><button> QR </button></td>
+                </tr>
+        </div>
+    </div>
+
+    <!-- 품목코드 카테고리 -->
+    <div class="main">
+        <div class="flex">
+            <div>품목코드</div>
+            <div>품목명<span>▼</span></div>
+            <div>바코드<span>▼</span></div>
+            <div>수정</div>
+            <div>삭제</div>
+        </div>
+
+        <!-- 품목 정보 -->
+        <div class="flex round">
+            <input type="checkbox" class="chk">
+            <!-- 품목코드 -->
+            <div>M001</div>
+            <!-- 품목명 -->
+            <div>밀가루</div>
+            <!-- 바코드 -->
+            <div class="sr_qrimg">QR</div>
+            <!-- 수정버튼 -->
+            <div><img class="sr_icon" src="https://cdn-icons-png.flaticon.com/512/764/764599.png"></div>
+            <div><img class="sr_icon" src="https://cdn-icons-png.flaticon.com/512/484/484662.png"></div>
+        </div>
+        <!-- 또 다른 품목 정보 -->
+        <div class="flex round">
+            <input type="checkbox" class="chk">
+            <div>M002</div>
+            <div>물</div>
+            <div class="sr_qrimg">QR</div>
+            <div><img class="sr_icon" src="https://cdn-icons-png.flaticon.com/512/764/764599.png"></div>
+            <div><img class="sr_icon" src="https://cdn-icons-png.flaticon.com/512/484/484662.png"></div>
+        </div>
+</body>
+
+</html>
