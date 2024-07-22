@@ -1,4 +1,3 @@
-document.querySelector("")
 document.addEventListener('DOMContentLoaded', function () {
     // 모달을 처음에는 보이지 않도록 설정
     const joinModal = document.getElementById('joinModal');
