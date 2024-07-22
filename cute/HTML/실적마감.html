@@ -31,95 +31,7 @@
             text-align: center;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js">
-        document.querySelectorAll(".category-link").forEach(function (item) {
-            item.addEventListener("click", function (event) {
-                event.preventDefault(); // 기본 링크 동작 방지
-
-                const url = this.getAttribute("data-url"); // 클릭한 링크의 data-url 가져오기
-
-                fetch(url)
-                    .then(response => response.text())
-                    .then(data => {
-                        // 차트를 그릴 HTML을 가져온 후, 기존 내용을 지우고 새로 추가
-                        document.body.innerHTML = data; // 기존 내용 지우고 새로운 내용 추가
-                        initCharts(); // 차트를 초기화하는 함수 호출
-                    })
-                    .catch(error => console.error("Error:", error));
-            });
-        });
-
-        // 차트를 초기화하는 함수
-        function initCharts() {
-            // 직선차트
-            new Chart(document.getElementById("line-chart"), {
-                type: 'line',
-                data: {
-                    labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
-                    datasets: [
-                        {
-                            data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
-                            label: "월요일",
-                            borderColor: "#3e95cd",
-                            fill: false
-                        },
-                        {
-                            data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
-                            label: "화요일",
-                            borderColor: "#8e5ea2",
-                            fill: false
-                        },
-                        {
-                            data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
-                            label: "수요일",
-                            borderColor: "#3cba9f",
-                            fill: false
-                        },
-                        {
-                            data: [40, 20, 10, 16, 24, 38, 74, 167, 508, 784],
-                            label: "목요일",
-                            borderColor: "#e8c3b9",
-                            fill: false
-                        },
-                        {
-                            data: [6, 3, 2, 2, 7, 26, 82, 172, 312, 433],
-                            label: "금요일",
-                            borderColor: "#c45850",
-                            fill: false
-                        }
-                    ]
-                },
-                options: {
-                    title: {
-                        display: true,
-                        text: '주간 생산량'
-                    }
-                }
-            });
-
-            // 도넛 차트
-            new Chart(document.getElementById("doughnut-chart"), {
-                type: 'doughnut',
-                data: {
-                    labels: ["월요일", "화요일", "수요일", "목요일", "금요일"],
-                    datasets: [
-                        {
-                            label: "Population (millions)",
-                            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                            data: [500, 600, 700, 600, 300]
-                        }
-                    ]
-                },
-                options: {
-                    title: {
-                        display: true,
-                        text: '주간 생산량'
-                    }
-                }
-            });
-        }
-
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </head>
 
 <body>
@@ -132,6 +44,7 @@
         </select>
     </div>
 
+
     <div class="linec">
         <canvas id="line-chart" width="500" height="400"></canvas>
     </div>
@@ -139,9 +52,10 @@
         <canvas id="doughnut-chart" width="500" height="400"></canvas>
     </div>
 
-    <script>
-        initCharts();
-    </script>
+
+
 </body>
+<script src='/JS/실적마감.js'></script>
+
 
 </html>
