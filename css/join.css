@@ -48,3 +48,27 @@ body {
 .square button:hover {
     background-color: blue;
 }
+
+.square {
+    padding: 20px;
+}
+
+.square input,
+.square button {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.square button {
+    width: 100px;
+    height: 40px;
+}
+
+.close-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.close-button:hover {
+    background-color: #d32f2f;
+}
