@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // 회원가입 폼 HTML을 가져와서 모달에 삽입
-    fetch('join.html')
+    fetch('회원가입.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('joinFormContainer').innerHTML = data;
