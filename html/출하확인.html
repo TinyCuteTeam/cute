@@ -31,9 +31,7 @@
             font-size: 10px;
         }
 
-
-
-        blue {
+        .blue {
             color: blue;
         }
 
@@ -44,8 +42,8 @@
             height: 50px;
             border-radius: 15px;
             position: absolute;
-            right: 0px;
-            bottom: -60px;
+            left: 45%;
+            bottom: 25%;
         }
 
         .btn:hover {
@@ -55,7 +53,7 @@
 
         .chk {
             position: relative;
-            left: -50px;
+            left: 20px;
             width: 20px;
         }
     </style>
@@ -74,9 +72,7 @@
 
         <div class="flex round">
             <input type="checkbox" class="chk">
-            <div>
-                <blue>(주)지앤시</blue>
-            </div>
+            <div class="blue">(주)지앤시</div>
             <div>24.07.18</div>
             <div>24.07.26</div>
             <div>3</div>
@@ -85,9 +81,7 @@
 
         <div class="flex round">
             <input type="checkbox" class="chk">
-            <div>
-                <blue>(주)지앤시</blue>
-            </div>
+            <div class="blue">(주)지앤시</div>
             <div>24.07.18</div>
             <div>24.07.26</div>
             <div>3</div>
@@ -96,9 +90,7 @@
 
         <div class="flex round">
             <input type="checkbox" class="chk">
-            <div>
-                <blue>(주)지앤시</blue>
-            </div>
+            <div class="blue">(주)지앤시</div>
             <div>24.07.18</div>
             <div>24.07.26</div>
             <div>3</div>
@@ -107,9 +99,7 @@
 
         <div class="flex round">
             <input type="checkbox" class="chk">
-            <div>
-                <blue>(주)지앤시</blue>
-            </div>
+            <div class="blue">(주)지앤시</div>
             <div>24.07.18</div>
             <div>24.07.26</div>
             <div>3</div>
@@ -121,10 +111,17 @@
 </body>
 
 <script>
-    let btn = document.querySelector(".btn")
+    let btn = document.querySelector(".btn");
+    let chks = document.querySelectorAll(".chk");
+
     btn.addEventListener("click", function () {
-        alert("출하성공!")
-    })
+        chks.forEach(chk => {
+            if (chk.checked) {
+                chk.parentElement.remove();
+            }
+        });
+        alert("출하성공!");
+    });
 </script>
 
 </html>
