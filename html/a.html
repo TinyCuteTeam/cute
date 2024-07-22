@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin-top: 10px;
+            width: 800px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .flex>div {
+            flex: 1;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .round {
+            border: 1px solid black;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .mbtn11 {
+            border: 1px solid rgb(55, 197, 240);
+            background-color: rgb(55, 197, 240);
+            color: black;
+            font-weight: 800;
+            border-radius: 20px;
+            padding: 5px 30px;
+            position: absolute;
+            left: 740px;
+        }
+
+        .mbtn11:hover {
+            background-color: white;
+        }
+
+        .mimg:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div>작업지시NO.</div>
+        <div>거래처</div>
+        <div>작성일자</div>
+        <div>납기일자</div>
+        <div>품목명</div>
+        <div>수량</div>
+        <div>작성자</div>
+        <div>작업지시서</div>
+    </div>
+
+    <div class="flex round">
+        <div>
+            <blue>0000001</blue>
+        </div>
+        <div>
+            <blue>(주)지앤시</blue>
+        </div>
+        <div>2024.07.18</div>
+        <div>2024.07.26</div>
+        <div>2BOX(80EA)</div>
+        <div>맹채윤</div>
+        <div class="mimg">첨부파일</div>
+    </div>
+
+    <div id="msg"></div>
+
+    <mleftt>
+        <button class="mbtn11">등록</button>
+    </mleftt>
+
+    <div class="mdiv"></div>
+
+    <script>
+        document.querySelector(".mbtn11").addEventListener("click", function(event) {
+            let mcontent = '';
+            mcontent += '<div class="flex round">'
+            mcontent += '<div>'
+            mcontent += '    <blue>0000001</blue>'
+            mcontent += '</div>'
+            mcontent += '<div>'
+            mcontent +=     '<blue>(주)지앤시</blue>'
+            mcontent += '</div>'
+            mcontent += '<div>2024.07.18</div>'
+            mcontent += '<div>2024.07.26</div>'
+            mcontent += '<div>2BOX(80EA)</div>'
+            mcontent += '<div>맹채윤</div>'
+            mcontent += '<div class="mimg">첨부파일</div>'
+            mcontent += '</div>'
+            document.querySelector("#msg").innerHTML += mcontent;
+        });
+
+        // 부모에 이벤트 위임
+        document.body.addEventListener("click", function(event) {
+            // ming이라는 클래스를 가졌을때
+            if (event.target.classList.contains("mimg")) {
+                // 새 창에 이미지 띄우기
+                let imageUrl = "https://coukey.co.kr/smartediter/upload_img/thum_4208_s.jpg";
+                window.open(imageUrl, '_blank');
+            }
+        });
+    </script>
+</body>
+</html>
