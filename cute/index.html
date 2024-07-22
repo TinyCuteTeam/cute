@@ -6,154 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandoo</title>
     <link rel="stylesheet" href="/style.css">
-    <script src="/script.js"></script>
 </head>
 
 <body>
+
+    <!-- 메인 -->
     <div class="category">
+
+        <!-- 메뉴 아이콘 -->
         <div class="menu-icon">
             <img class="menu-icon" src="/image/menu.png">
         </div>
+
+        <!-- 로고 아이콘 -->
         <div class="category-item">
-            <a href="/메인페이지"><img class="logo-icon" src="/image/logo.png">
+            <a href="#" class="category-link" data-url="main.html"><img class="logo-icon" src="/image/logo.png"></a>
+        </div>
+
+        <!-- 카테고리 -->
+        <div class="category-item">
+            <a href="#" class="category-link title" data-url="HTML/품목코드조회.html">기준관리</a>
+            <div class="_category">
+                <a href="#" class="category-link" data-url="HTML/품목코드조회.html">품목 코드 조회</a><br>
+                <a href="#" class="category-link" data-url="HTML/BOM.html">BOM(레시피관리)</a><br>
+                <a href="#" class="category-link" data-url="HTML/거래처관리.html">거래처 관리</a><br>
+            </div>
+        </div>
+        <div class="category-item">
+            <a href="#" class="category-link title" data-url="HTML/발주확인.html">생산계획</a>
+            <div class="_category">
+                <a href="#" class="category-link" data-url="HTML/발주확인.html">발주확인</a> <br>
+                <a href="#" class="category-link" data-url="HTML/작업지시서(관리자용).html">작업지시서(관리자용)</a> <br>
+                <a href="#" class="category-link" data-url="HTML/작업지시서(작업자용).html">작업지시서(작업자용)</a> <br>
+                <a href="#" class="category-link" data-url="HTML/작업지시서조회.html">작업지시서 조회</a> <br>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <a href="#" class="category-link title" data-url="HTML/재고현황.html">재고관리</a>
+            <div class="_category">
+                <a href="#" class="category-link" data-url="HTML/재고현황.html">재고현황</a>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <a href="#" class="category-link title" data-url="HTML/생산현황.html">공정관리</a>
+            <div class="_category">
+                <a href="#" class="category-link" data-url="HTML/생산현황.html">생산현황</a>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <a href="#" class="category-link title" data-url="HTML/품질관리.html">품질관리</a>
+            <div class="_category">
+                <a href="#" class="category-link" data-url="HTML/품질관리.html">품질관리</a><br>
+                <a href="#" class="category-link" data-url="HTML/에러코드.html">에러코드</a><br>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <a href="#" class="category-link title" data-url="HTML/실적마감.html">실적 및 출하</a>
+            <div class="_category">
+                <a href="#" class="category-link" data-url="HTML/실적마감.html">실적마감</a><br>
+                <a href="#" class="category-link" data-url="HTML/출하확인.html">출하확인</a><br>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <a href="#" class="category-link" data-url="마이페이지">
+                <img class="mypage-icon" src="/image/mypage.png">
             </a>
-        </div>
-        <div class="category-item">
-            <a href="#" data-content="기준관리">기준관리</a>
-            <div class="_category">
-                <a href="#" data-content="품목코드조회">품목 코드 조회</a><br>
-                <a href="#" data-content="BOM">BOM(레시피관리)</a><br>
-                <a href="#" data-content="거래처관리">거래처 관리</a><br>
-            </div>
-        </div>
-        <div class="category-item">
-            <a href="#" data-content="생산계획">생산계획</a>
-            <div class="_category">
-                <a href="#" data-content="발주확인">발주확인</a> <br>
-                <a href="#" data-content="작업지시서(관리자용)">작업지시서(관리자용)</a> <br>
-                <a href="#" data-content="작업지시서(작업자용)">작업지시서(작업자용)</a> <br>
-                <a href="#" data-content="작업지시서조회">작업 지시서 조회</a> <br>
-            </div>
-        </div>
 
-        <div class="category-item">
-            <a href="#" data-content="재고관리">재고관리</a> <br>
-            <div class="_category">
-                <a href="#" data-content="재고현황">재고현황</a>
-            </div>
-        </div>
-
-        <div class="category-item">
-            <a href="#" data-content="공정관리">공정관리</a>
-            <div class="_category">
-                <a href="#" data-content="생산현황">생산현황</a>
-            </div>
-        </div>
-
-        <div class="category-item">
-            <a href="#" data-content="품질관리">품질관리</a>
-            <div class="_category">
-                <a href="#" data-content="품질관리">품질관리</a><br>
-                <a href="#" data-content="에러코드">에러코드</a><br>
-            </div>
-        </div>
-
-        <div class="category-item">
-            <a href="#" data-content="실적및출하">실적 및 출하</a>
-            <div class="_category">
-                <a href="#" data-content="실적마감">실적마감</a><br>
-                <a href="#" data-content="출하확인">출하확인</a><br>
-            </div>
-        </div>
-
-        <div class="category-item">
-            <a href="/마이페이지"><img class="mypage-icon" src="/image/mypage.png">
-            </a>
             <div class="_category">
                 <a href="/마이페이지">마이페이지</a> <br>
                 <a href="/계정관리">계정관리</a>
             </div>
+
         </div>
 
     </div>
-    <div class="content">
-        <h1 id="page-title">환영합니다!</h1>
-        <div id="page-content">
-            <p>여기에 기본 콘텐츠가 표시됩니다.</p>
-        </div>
-    </div>
 
-    <div class="sidebar" id="sidebar">
-        <ul>
-            <li><a href="#" data-content="품목코드조회">품목 코드 조회</a></li>
-            <li><a href="#" data-content="BOM">BOM(레시피관리)</a></li>
-            <li><a href="#" data-content="거래처관리">거래처 관리</a></li>
+    <!-- 사이드바 -->
+    <div class="sidebar">
+        <ul id="sidebar-content">
         </ul>
     </div>
 
-    
-    <!-- </div>
+    <!-- 내용페이지  -->
+    <div class="content">
+        <h2>내용 영역</h2>
+        <div id="content-display">여기에 소카테고리 내용을 표시합니다.</div>
+    </div>
 
-    <div class="menu-icon">메뉴</div>
-    <div class="sidebar">
-        <div class="sidebar-item">
-            <a href="/기준관리">기준관리</a>
-            <div class="_sidebar">
-                <a href="/품목코드조회">품목 코드 조회</a><br>
-                <a href="/BOM">BOM(레시피관리)</a><br>
-                <a href="/거래처관리">거래처 관리</a><br>
-            </div>
-        </div>
 
-        <div class="sidebar-item">
-            <a href="/생산계획">생산계획</a>
-            <div class="_sidebar">
-                <a href="/발주확인">발주확인</a> <br>
-                <a href="/작업지시서(관리자용)">작업지시서(관리자용)</a> <br>
-                <a href="/작업지시서(작업자용)">작업지시서(작업자용)</a> <br>
-                <a href="/작업지시서조회">작업 지시서 조회</a> <br>
-            </div>
-        </div>
 
-        <div class="sidebar-item">
-            <a href="/재고관리">재고관리</a> <br>
-            <div class="_sidebar">
-                <a href="/재고현황">재고현황</a>
-            </div>
-        </div>
-
-        <div class="sidebar-item">
-            <a href="/공정관리">공정관리</a>
-            <div class="_sidebar">
-                <a href="/생산현황">생산현황</a>
-            </div>
-        </div>
-
-        <div class="sidebar-item">
-            <a href="/품질관리">품질관리</a>
-            <div class="_sidebar">
-                <a href="/품질관리">품질관리</a><br>
-                <a href="/에러코드">에러코드</a><br>
-            </div>
-        </div>
-
-        <div class="sidebar-item">
-            <a href="/실적및출하">실적 및 출하</a>
-            <div class="_sidebar">
-                <a href="/실적마감">실적마감</a><br>
-                <a href="/출하확인">출하확인</a><br>
-            </div>
-        </div>
-
-        <div class="sidebar-item">
-            <a href="/마이페이지"><img class="mypage-icon" src="/image/mypage.png">
-            </a>
-            <div class="_sidebar">
-                <a href="/마이페이지">마이페이지</a> <br>
-                <a href="/계정관리">계정관리</a>
-            </div>
-        </div>
-    </div> -->
+    <script src="/script.js"></script>
 </body>
 
 </html>

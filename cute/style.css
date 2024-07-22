@@ -1,6 +1,7 @@
 ﻿body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 a {
@@ -46,32 +47,31 @@ a {
         font-size: 16px;
         line-height: 50px;
         padding-top: 50px;
-        box-shadow: 0 5px 0px rgba(119, 119, 119, 0.1); /* 아래쪽에만 그림자 추가 */
+        box-shadow: 0 5px 0px rgba(119, 119, 119, 0.1);
+        /* 아래쪽에만 그림자 추가 */
     }
-    
+
 
     .menu-icon {
-        display: none;
-    }
-
-    .sidebar {
         display: none;
     }
 }
 
 .sidebar {
-    display: none; /* 기본적으로 숨김 */
+    display: none;
     position: absolute;
-    top: 100px; /* 메뉴 아래에 위치 */
-    width: 300px; /* 사이드바 너비 */
+    top: 100px;
+    /* 메뉴 아래에 위치 */
+    width: 230px;
+    /* 사이드바 너비 */
     background-color: #E6E6E6;
     height: 1000px;
 }
 
 .category-item.active a {
-    color: #0085FF; /* 기준관리 클릭 시 색상 변경 */
+    color: #0085FF;
+    /* 기준관리 클릭 시 색상 변경 */
 }
-
 
 
 .category:hover ._category {
@@ -135,8 +135,9 @@ span {
 
 .content {
     position: absolute;
-    left: 400px;
+    left: 300px;
     top: 150px;
+    width: 1300px;
 }
 
 blue {
@@ -152,16 +153,19 @@ blue {
     line-height: 20px;
 }
 
-.content {
-    z-index: 1;
-}
 
 .active {
     color: #0085FF;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 canvas {
     width: 500px !important;
     height: 400px !important;
+}
+
+/* styles.css */
+.sidebar li.active {
+    color: #0085FF; /* 클릭된 사이드바 항목의 색상 */
+    font-weight: bold; /* 강조를 위해 볼드 처리 */
 }
