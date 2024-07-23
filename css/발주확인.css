@@ -1,0 +1,88 @@
+blue{
+    color: blue;
+}
+
+.mcate{
+   padding: 5px 20px;
+   font-weight: 700;
+   border-radius: 5px;
+}
+
+.mcontain{
+    display: inline-block;
+    border: 1px solid red;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 10px;
+    width: 800px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.flex>div {
+    flex: 1;
+    text-align: center;
+    line-height: 50px;
+}
+
+.round {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.mbtn1 {
+    border: 1px solid rgb(55, 197, 240);
+    background-color: rgb(55, 197, 240);
+    color: black;
+    font-weight: 800;
+    border-radius: 20px;
+    padding: 5px 30px;
+    /* position: absolute;
+    left: 100px; */
+}
+.mbtn1:hover{
+    background-color: white;
+}
+
+.mbtn2 {
+    border: 1px solid red;
+    background-color: red;
+    color: black;
+    font-weight: 800;
+    border-radius: 20px;
+    padding: 5px 30px;
+    /* position: absolute;
+    left: 200px; */
+}
+.mbtn2:hover{
+    background-color: white;
+}
+
+mleft {
+    margin: 30px;
+    position: absolute;
+    left: 615px;
+}
+
+.mnum{
+    display: inline-block;
+    position: absolute;
+    left: 360px;
+}
+
+.mbox{
+    margin: 10px;
+}
+
+.sae{
+    display: none;
+}
+
+.gun{
+    display: none;
+}
