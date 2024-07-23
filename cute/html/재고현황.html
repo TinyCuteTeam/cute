@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재고현황 - 재고관리</title>
+        <link rel = "stylesheet" href="/css/재고현황.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">재고 현황</h1>
+    
+    <div class = mtab style="text-align: center;">
+        <input type="text" id="item-code" placeholder="품목코드" />
+        <input type="text" id="item-name" placeholder="품목명" />
+        <input type="text" id="item-image" placeholder="이미지코드" />
+        <input type="number" id="item-stock" placeholder="재고수량" />
+        <input type="number" id="item-available" placeholder="가용수량" />
+        <button id="add-item">등록</button>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="mth">품목코드</th>
+                <th class="mth">품목명</th>
+                <th class="mth">이미지</th>
+                <th class="mth">재고수량</th>
+                <th class="mth">가용수량</th>
+                <th class="mth">수정</th>
+                <th class="mth">삭제</th>
+            </tr>
+        </thead>
+        <tbody id="product-table-body">
+            <!-- JavaScript로 데이터가 추가될 부분 -->
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <!-- 페이지 버튼이 여기에 추가될 것입니다 -->
+    </div>
+    
+<script src="/js/재고현황.js">
+
+</script>
+</body>
+</html>
