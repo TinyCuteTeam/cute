@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생산계획 - 작업지시서(관리자)</title>
+    <style>
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin-top: 10px;
+            width: 800px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .flex>div {
+            flex: 1;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .round {
+            border: 1px solid black;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .mbtn11 {
+            border: 1px solid rgb(55, 197, 240);
+            background-color: rgb(55, 197, 240);
+            color: black;
+            font-weight: 800;
+            border-radius: 20px;
+            padding: 5px 30px;
+            position: absolute;
+            left: 740px;
+        }
+
+        .mbtn11:hover {
+            background-color: white;
+        }
+
+        .mimg:hover {
+            color: red;
+        }
+
+        input[type="text"]{
+            width: 80px;
+        }
+
+        .mfont div{
+            font-size: 15px;
+        }
+
+        div{
+            font-size: 13px;
+        }
+
+        .add{
+            margin-top: 10px;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex mfont">
+        <div>작업지시NO.</div>
+        <div>거래처</div>
+        <div>작성일자</div>
+        <div>납기일자</div>
+        <div>품목명</div>
+        <div>수량(BOX)</div>
+        <div>작성자</div>
+        <div>작업지시서</div>
+    </div>
+
+    <div class="flex round">
+        <div>
+            <blue><input type="text" id="minfo1"></blue>
+        </div>
+        <div>
+            <blue><input type="text" id="minfo2"></blue>
+        </div>
+        <div><input type="text" id="minfo3"></div>
+        <div><input type="text" id="minfo4"></div>
+        <div><input type="text" id="minfo5"></div>
+        <div><input type="text" id="minfo6"></div>
+        <div><input type="text" id="minfo7"></div>
+        <div><img class="add" src ="https://cdn-icons-png.flaticon.com/512/304/304589.png"></div>
+    </div>
+
+    <div id="msg"></div>
+
+    <mleftt>
+        <button class="mbtn11">등록</button>
+    </mleftt>
+
+    <div class="mdiv"></div>
+
+    <script>
+        let mbtn11 = document.querySelector(".mbtn11")
+        mbtn11.addEventListener("click", function(event) {
+            let minfo1 = document.querySelector("#minfo1").value;
+            let minfo2 = document.querySelector("#minfo2").value;
+            let minfo3 = document.querySelector("#minfo3").value;
+            let minfo4 = document.querySelector("#minfo4").value;
+            let minfo5 = document.querySelector("#minfo5").value;
+            let minfo6 = document.querySelector("#minfo6").value;
+            let minfo7 = document.querySelector("#minfo7").value;
+            let mcontent = '';
+
+            if (minfo1 == '' || minfo2 == '' || minfo3 == '' || minfo4 == '' || minfo5 == '' || minfo6 == '' || minfo7 == ''){
+                alert("빈칸을 채워주세요")
+            } else if (minfo6 != Number(minfo6)){
+                alert("수량은 숫자만 가능합니다")
+            } else if (minfo7.length >= 5){
+                alert("이름을 다시 한번 확인해주세요")
+            } else {
+                mcontent += '<div class="flex round">'
+                mcontent += '<div>'
+                mcontent += `    <blue>${minfo1}</blue>`
+                mcontent += '</div>'
+                mcontent += '<div>'
+                mcontent +=  `   <blue>${minfo2}</blue>`
+                mcontent += '</div>'
+                mcontent += `<div>${minfo3}</div>`
+                mcontent += `<div>${minfo4}</div>`
+                mcontent += `<div>${minfo5}</div>`
+                mcontent += `<div>${minfo6}BOX</div>`
+                mcontent += `<div>${minfo7}</div>`
+                mcontent += '<div><img class="add mimg" src="https://cdn.icon-icons.com/icons2/3373/PNG/512/photo_icon_211248.png"></div>'
+                mcontent += '</div>'
+                document.querySelector("#msg").innerHTML += mcontent;
+            }
+        });
+
+        // 부모에 이벤트 위임
+        document.body.addEventListener("click", function(event) {
+            // ming이라는 클래스를 가졌을때
+            if (event.target.classList.contains("mimg")) {
+                // 새 창에 이미지 띄우기
+                let imageUrl = "https://coukey.co.kr/smartediter/upload_img/thum_4208_s.jpg";
+                window.open(imageUrl, '_blank'); // 창띄우기
+            }
+        });
+    </script>
+</body>
+</html>

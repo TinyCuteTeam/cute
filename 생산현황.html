@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생산현황</title>
+    <style>
+        .home {
+            width: 1000px;
+            border: 1px solid red;
+        }
+        .mandoo {
+            width: 80%;
+        }
+        .pick {
+            padding: 5px 20px;
+            font-weight: 700;
+            border-radius: 5px;
+        }
+        .progress-container {
+            height: 30px;
+            width: 80%;
+            background-color: #e0e0e0;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #76c7c0;
+            animation: progress 3s ease-in-out forwards;
+        }
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+            to {
+                width: 50%;
+            }
+        }
+        img {
+            width: 25px;
+        }
+        .count {
+            margin: 10px;
+        }
+        
+        /* bar와 count를 display none 하는 것 */
+        /*
+        .b1, .c1 {
+            display: none;
+        }
+        .b2, .c2 {
+            display: none;
+        }
+        .b3, .c3 {
+            display: none;
+        }
+        */
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="mandoo">
+            <select class="pick">
+                <option>전체</option>
+                <option>000001/비비고 왕교자</option>
+                <option>000002/비비고 새우만두</option>
+                <option>000003/비비고 군만두</option>
+            </select>
+        </div>
+        <div class="bar b1">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="count c1">
+            <button><img src="/reload-outline.png"></button>
+            <br>
+            <span>생산 수량 | 20 BOX</span><br>
+            <span>불량 수량 | 1 BOX</span>
+        </div>
+        <div class="bar b2">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="count c2">
+            <button><img src="/reload-outline.png"></button>
+            <br>
+            <span>생산 수량 | 30 BOX</span><br>
+            <span>불량 수량 | 3 BOX</span>
+        </div>
+        <div class="bar b3">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="count c3">
+            <button><img src="/reload-outline.png"></button>
+            <br>
+            <span>생산 수량 | 5 BOX</span><br>
+            <span>불량 수량 | 0 BOX</span>
+        </div>
+    </div>
+</body>
+</html>
