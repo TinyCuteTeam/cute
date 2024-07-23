@@ -9,66 +9,63 @@ a {
     text-decoration: none;
 }
 
-/* 1270px 이상 */
-@media (min-width: 1260px) {
-    .category {
-        background-color: #E6E6E6;
-        display: flex;
-        justify-content: space-evenly;
-        position: relative;
-        width: 100%;
-        height: 100px;
-        line-height: 100px;
-        text-align: center;
-        margin: 0;
-    }
-
-    .category-item {
-        position: relative;
-        width: 15%;
-        text-align: center;
-        font-weight: bolder;
-        font-size: 20px;
-        line-height: 100px;
-    }
-
-    ._category {
-        width: 100%;
-        height: 250px;
-        opacity: 0;
-        /* 초기 상태에서 투명하게 설정 */
-        visibility: hidden;
-        /* 기본적으로 보이지 않도록 설정 */
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: white;
-        z-index: 3;
-        white-space: nowrap;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 50px;
-        padding-top: 50px;
-        box-shadow: 0 5px 0px rgba(119, 119, 119, 0.1);
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        /* 투명도와 가시성에 애니메이션 추가 */
-    }
-
-    .category:hover ._category {
-        opacity: 1;
-        /* Hover 시 불투명하게 설정 */
-        visibility: visible;
-        /* Hover 시 보이도록 설정 */
-    }
-
-    .menu-icon {
-        display: none;
-    }
+.category {
+    background-color: #E6E6E6;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0;
 }
 
-.sidebar {
+.category-item {
+    position: relative;
+    width: 15%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    line-height: 100px;
+}
+
+._category {
+    width: 100%;
+    height: 250px;
+    opacity: 0;
+    /* 초기 상태에서 투명하게 설정 */
+    visibility: hidden;
+    /* 기본적으로 보이지 않도록 설정 */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    z-index: 3;
+    white-space: nowrap;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 50px;
+    padding-top: 50px;
+    box-shadow: 0 5px 0px rgba(119, 119, 119, 0.1);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* 투명도와 가시성에 애니메이션 추가 */
+}
+
+.category:hover ._category {
+    opacity: 1;
+    /* Hover 시 불투명하게 설정 */
+    visibility: visible;
+    /* Hover 시 보이도록 설정 */
+}
+
+.menu-icon {
     display: none;
+}
+
+
+.sidebar {
     position: absolute;
     top: 100px;
     /* 메뉴 아래에 위치 */
@@ -164,17 +161,6 @@ blue {
 }
 
 
-.active {
-    color: #0085FF;
-    font-weight: bold;
-    background-color: rgba(194, 211, 255, 0.364);
-    /* 배경 색상 */
-    border-radius: 5px;
-    /* 모서리 둥글게 */
-    padding: 7px 20px;
-    /* 패딩 */
-}
-
 canvas {
     width: 500px !important;
     height: 400px !important;
@@ -186,4 +172,19 @@ canvas {
     /* 클릭된 사이드바 항목의 색상 */
     font-weight: bold;
     /* 강조를 위해 볼드 처리 */
+}
+
+.title {
+    color: #0085FF;
+    font-weight: bold;
+    background-color: rgba(194, 211, 255, 0.364);
+    /* 배경 색상 */
+    border-radius: 5px;
+    /* 모서리 둥글게 */
+    padding: 7px 20px;
+}
+
+
+.sidebar ul > li {
+    padding-bottom: 10px;
 }

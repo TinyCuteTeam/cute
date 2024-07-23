@@ -1,1 +1,53 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비비고 만두 재고 현황</title>
+    <link rel="stylesheet" href="/CSS/재고현황.css">
+    <style>
+        .table {
+            border-collapse: collapse;
+            /* 테두리 겹침 방지 */
+            width: 100%;
+            /* 테이블 폭 설정 */
+        }
+
+        .table td,
+        .table th {
+            border: 1px solid black;
+            /* 셀 테두리 설정 */
+            padding: 8px;
+            /* 셀 안쪽 여백 */
+            text-align: left;
+            /* 텍스트 정렬 */
+        }
+
+        .table tr:nth-child(even) {
+            background-color: #f2f2f2;
+            /* 짝수 행 배경색 설정 (선택 사항) */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>비비고 만두 재고 현황</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>품목코드</th>
+                <th>품목명</th>
+                <th>이미지</th>
+                <th>재고수량</th>
+                <th>가용수량</th>
+            </tr>
+        </thead>
+        <tbody id="product-table-body">
+            <!-- JavaScript로 데이터가 추가될 부분 -->
+        </tbody>
+    </table>
+    <script src="/JS/재고현황.js"></script>
+</body>
+
+</html>

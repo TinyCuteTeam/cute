@@ -133,3 +133,44 @@ function activateLink(link) {
     title.classList.add("active"); // 제목에 active 클래스 추가
   }
 }
+
+
+
+
+
+
+// Ajax 연결..... javascript 연결
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('.category-link[data-url]');
+  
+  links.forEach(link => {
+      link.addEventListener('click', (event) => {
+          event.preventDefault(); // 기본 링크 동작 방지
+          const url = link.getAttribute('data-url'); // data-url 속성에서 URL 가져오기
+          
+          // AJAX 요청
+          fetch(url)
+              .then(response => {
+                  if (!response.ok) {
+                      throw new Error('네트워크 응답이 좋지 않습니다.');
+                  }
+                  return response.text(); // 응답을 텍스트로 변환
+              })
+              .then(data => {
+                  document.getElementById('content-display').innerHTML = data; // 콘텐츠 영역에 로드
+
+                  // 동적으로 JavaScript 파일 로드
+                  const scriptUrl = link.getAttribute('data-script'); // data-script 속성에서 스크립트 URL 가져오기
+                  if (scriptUrl) {
+                      const scriptElement = document.createElement('script');
+                      scriptElement.src = scriptUrl;
+                      document.body.appendChild(scriptElement); // 스크립트 추가
+                  }
+              })
+              .catch(error => {
+                  document.getElementById('content-display').innerHTML = '페이지를 불러오는 데 오류가 발생했습니다.❌';
+                  console.error('페이지 로드 오류:', error);
+              });
+      });
+  });
+});
