@@ -86,12 +86,14 @@
         margin: 10px;
     }
 </style>
-
 </head>
+
 <body>
+    <!-- 비비고 등 브랜드 카테고리 목록 만들기 -->
     <select name="mcategory" id="mcate">
         <option value="1" selected="selected">비비고</option>
     </select>
+    <!-- 비비고 판매 만두 카테고리 목록 만들기 -->
     <select name="mcategory" id="mcate">
         <option value="1" selected="selected">왕교자</option>
         <option value="2">새우만두</option>
@@ -110,6 +112,7 @@
         <option value="15">훈제연어만두</option>
     </select>
 
+    <!-- 각 내용별 제목 -->
     <div class="flex">
         <div>거래처</div>
         <div>발주일<span>▼</span></div>
@@ -118,7 +121,8 @@
         <div>개수(EA)</div>
         <div>단가(원)</div>
     </div>
-
+    
+    <!-- 각 제목별 내용 -->
     <div class="flex round">
         <input type="checkbox" class="mchk">
         <div>
@@ -130,7 +134,8 @@
         <div>120</div>
         <div>1,250</div>
     </div>
-
+    
+    <!-- 각 제목별 내용 -->
     <div class="flex round">
         <input type="checkbox" class="mchk">
         <div>
@@ -139,35 +144,42 @@
         <div>24.04.18</div>
         <div>24.08.25</div>
         <div>200</div>
-        <div>1,850</div>
+        <div>850</div>
         <div>1,300</div>
     </div>
-
+    
+    <!-- 각 제목별 내용 -->
     <div class="flex round">
         <input type="checkbox" class="mchk">
         <div>
-            <blue>(주)천종복</blue>
+            <blue>인천마트</blue>
         </div>
-        <div>23.01.18</div>
-        <div>24.09.27</div>
+        <div>23.07.18</div>
+        <div>24.08.05</div>
         <div>30</div>
         <div>200</div>
         <div>1,200</div>
     </div>
-
+    
+    <!-- 페이지 수 넘기는 번호 -->
     <div class = "mnum">
         <span class = "mbox">1</span>
         <span class = "mbox">2</span>
         <span class = "mbox">3</span>
         <span class = "mbox">4</span>
     </div>
-
+    
+    <!-- 체크박스를 선택했을때, 발주 승인/취소 버튼 -->
     <mleft>
-    <button class="mbtn1"> 승인 </button>
-    <button class="mbtn2"> 취소 </button>
+        <button class="mbtn1"> 승인 </button>
+        <button class="mbtn2"> 취소 </button>
     </mleft>
-
-<script>
+    
+    <script>
+    // 체크박스를 선택하고 승인버튼을 눌렀을 때,
+    // 선택하지 않았을 경우, 기본상태를 False로 두고
+    // 선택되어지면 True로 바꿔서
+    // False일 경우, "목록을 선택해주세요", True일 경우, "승인이 완료되었습니다"
     let mchoice1 = document.querySelectorAll(".mchk");
     let mchk = document.querySelectorAll(".mchk");
     let mbtn1 = document.querySelector(".mbtn1");
@@ -185,6 +197,8 @@
         }
     })
 
+    // 승인이 완료될 경우, 즉 체크박스가 체크되었을 경우(== false),
+    // 체크박스의 부모를 지움 (한줄삭제)
     mbtn1.addEventListener("click", function(event) {
         for(let i=0; i<mchk.length; i++){
         if(mchk[i].checked){
@@ -193,6 +207,11 @@
         }}
     });
 
+    // 취소버튼을 눌렀을때, 체크박스의 기본상태를 false로 두고
+    // 체크박스가 선택되지 않았을때, 즉 false일 경우에 취소버튼을 누르면
+    // "목록을 선택해주세요", 체크박스가 선택된 후, 취소버튼을 눌렀을때 즉 True일 경우,
+    // "정말 취소하시겠습니까?" 한번 더 확인 문구가 나온다음
+    // 선택된 체크박스의 부모요소를 지움(한줄삭제)
     let mbtn2 = document.querySelector(".mbtn2");
     mbtn2.addEventListener("click",function(){
     let isOkay = false;
@@ -201,7 +220,6 @@
                 isOkay = true;
             }
         }
-
         if (isOkay == false){
             alert("목록을 선택해주세요");
         } else {
@@ -214,17 +232,15 @@
                         }
                     }
                 } else{
-                    alert("삭제를 취소합니다");
+                    alert("목록을 확인해주세요");
                 }
             }
    })
 
-// 페이지 넘기는걸 구현해보고싶었던 나의 욕심....   
-//    let box1 = document.querySelector(".box2")
-//    box1.addEventListener("click",function(){
-
-//    })
+   // 승인, 취소 동일하게 계속 반복해서 승인/ 취소를 할 경우,
+   // 한번 반복하고(즉 승인 또는 취소를 한번 한 후) 초기화 -> 다시 반복하고 초기화 이런식으로
+   // 해서 alert창이 첫번째 실행할 때와 동일 할 수 있도록
+   // mchk[i].checked = false; -> 동일하게 승인, 취소에 초기화 진행
 </script>
-
 </body>
 </html>

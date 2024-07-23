@@ -49,19 +49,25 @@
         }
 
         .mnum{
-        display: inline-block;
-        position: absolute;
-        left: 360px;
+            display: inline-block;
+            position: absolute;
+            left: 360px;
         }
 
         .mbox{
-        margin: 10px;
+            margin: 10px;
         }
-
     </style>
 </head>
+
 <body>
+    <!-- 진행상태별로 -->
+    <!-- 작업중은 초록색 -->
+    <!-- 작업예정은 빨간색 -->
+    <!-- 색상 및 폰트굵기 요소 추가 -->
+
     <div class="main">
+        <!-- 각 내용별 제목  -->
         <div class="flex mfont">
             <div>작업지시NO.</div>
             <div>거래처</div>
@@ -73,6 +79,7 @@
             <div>진행상태</div>
         </div>
 
+        <!-- 각 제목별 내용 -->
         <div class="flex round">
             <div>
                 <blue>0000001</blue>
@@ -88,6 +95,7 @@
             </div>
         </div>
 
+        <!-- 각 제목별 내용 -->
         <div class="flex round">
             <div>
                 <blue>0000001</blue>
@@ -103,6 +111,7 @@
             </div>
         </div>
 
+        <!-- 각 제목별 내용 -->
         <div class="flex round">
             <div>
                 <blue>0022334</blue>
@@ -118,6 +127,7 @@
             </div>
         </div>
 
+        <!-- 각 제목별 내용 -->
         <div class="flex round">
             <div>
                 <blue>1240001</blue>
@@ -133,11 +143,13 @@
             </div>
         </div>
 
+        <!-- 페이지 수 넘기는 번호 -->
         <div class = "mnum">
             <span class = "mbox">1</span>
             <span class = "mbox">2</span>
             <span class = "mbox">3</span>
             <span class = "mbox">4</span>
         </div>
+    </div>
 </body>
 </html>

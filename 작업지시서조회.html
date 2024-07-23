@@ -19,6 +19,11 @@
             font-weight: 700;
         }
 
+        .black{
+            color: black;
+            font-weight: 700;
+        }
+
         .flex {
             display: flex;
             justify-content: space-between;
@@ -50,18 +55,59 @@
         }
 
         .mnum{
-        display: inline-block;
-        position: absolute;
-        left: 360px;
+            display: inline-block;
+            position: absolute;
+            left: 360px;
         }
 
         .mbox{
-        margin: 10px;
+            margin: 10px;
+        }
+
+        .sr_search{
+            width: 1000px;
+            /* text-align: center; */
+            width:50%;
+            margin:auto;
+        }
+        
+        .sr_search_text{
+            border: 1px solid black;
+            border-radius: 30px;
+            width: 400px;
+            height: 40px;
+            position: relative;
+            top: 40px;
+            right: 100px;
+        }
+
+        .sr_searchbar{
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 45px;
+            right: 80px;
+        }
+        
+        .sr_button{
+            background-color: hsl(220, 91%, 74%);
+            border-radius:30px;
+            font-size:15px;
+            width: 80px;
+            height: 40px;
         }
     </style>
 </head>
+
 <body>
+    <!-- 진행상태별로 -->
+    <!-- 작업중은 초록색 -->
+    <!-- 작업예정은 빨간색 -->
+    <!-- 작업완료는 검은색 -->
+    <!-- 색상 및 폰트굵기 요소 추가 -->
+
     <div class="main">
+        <!-- 각 제목별 내용 -->
         <div class="flex mfont">
             <div>작업지시NO.</div>
             <div>거래처</div>
@@ -73,71 +119,83 @@
             <div>진행상태</div>
         </div>
 
+        <!-- 각 제목별 내용 -->
         <div class="flex round">
             <div>
-                <blue>0000001</blue>
+                <blue>2023-001</blue>
             </div>
-                <blue>(주)지앤시</blue>
-            <div>2024.07.18</div>
-            <div>2024.07.26</div>
-            <div>비비고/물만두</div>
+                <blue>서울마트</blue>
+            <div>2024.07.01</div>
+            <div>2024.07.05</div>
+            <div>비비고/왕교자</div>
             <div>2BOX</div>
-            <div>강희연</div>
+            <div>김철수</div>
             <div>
                 <color class="green">작업중</color>
             </div>
         </div>
 
+        <!-- 각 제목별 내용 -->
         <div class="flex round">
             <div>
-                <blue>0000001</blue>
+                <blue>2023-002</blue>
             </div>
-                <blue>(주)지앤시</blue>
-            <div>2024.07.18</div>
-            <div>2024.07.26</div>
+                <blue>부산슈퍼</blue>
+            <div>2024.07.03</div>
+            <div>2024.07.07</div>
             <div>비비고/김치만두</div>
-            <div>2BOX</div>
-            <div>강희연</div>
+            <div>150BOX</div>
+            <div>이영희</div>
             <div>
                 <color class="red">작업예정</color>
             </div>
         </div>
 
+        <!-- 각 제목별 내용 -->
         <div class="flex round">
             <div>
-                <blue>0022334</blue>
+                <blue>2023-003</blue>
             </div>
-                <blue>(주)지앤시</blue>
-            <div>2024.07.18</div>
+                <blue>(주)인해</blue>
+            <div>2024.07.06</div>
             <div>2024.07.26</div>
-            <div>비비고/김치만두</div>
-            <div>2BOX</div>
-            <div>강희연</div>
+            <div>비비고/새우만두</div>
+            <div>120BOX</div>
+            <div>최수지</div>
             <div>
-                <color class="green">작업중</color>
+                <color class="black">작업완료</color>
             </div>
         </div>
 
+        <!-- 각 제목별 내용 -->
         <div class="flex round">
             <div>
                 <blue>1240001</blue>
             </div>
                 <blue>(주)지앤시</blue>
-            <div>2024.07.18</div>
-            <div>2024.07.26</div>
+            <div>2024.07.08</div>
+            <div>2024.09.02</div>
             <div>비비고/고기만두</div>
-            <div>2BOX</div>
-            <div>강희연</div>
+            <div>160BOX</div>
+            <div>김지훈</div>
             <div>
                 <color class="green">작업중</color>
             </div>
         </div>
 
+        <!-- 페이지 수 넘기는 번호 -->
         <div class = "mnum">
             <span class = "mbox">1</span>
             <span class = "mbox">2</span>
             <span class = "mbox">3</span>
             <span class = "mbox">4</span>
         </div>
+
+        <!-- 검색어(제목별)를 입력했을때 정렬 될 수 있도록 검색창 제작 -->
+        <div class="sr_search">
+            <input class="sr_search_text" type="text" placeholder="&nbsp; 검색">
+            <img class="sr_searchbar" src="https://cdn3.iconfinder.com/data/icons/feather-5/24/search-512.png">
+        </div>
+    </div>
 </body>
 </html>
