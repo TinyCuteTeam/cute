@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .doughnut {
+            position: absolute;
+            top: 30%;
+            left: 60%;
+        }
+
+        .linec {
+            position: absolute;
+            top: 30%;
+            left: 20%;
+        }
+
+        .select {
+            position: absolute;
+            top: 22%;
+            left: 20%;
+        }
+
+        ._select {
+
+            width: 100px;
+            height: 30px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <!-- <div id="category-container"></div> -->
+
+    <div class="select">
+        <select class="_select">
+            <option>주간</option>
+            <option>월간</option>
+            <option>분기별</option>
+        </select>
+    </div>
+
+
+    <div class="linec">
+        <canvas id="line-chart" width="500" height="400"></canvas>
+    </div>
+    <div class="doughnut">
+        <canvas id="doughnut-chart" width="500" height="400"></canvas>
+    </div>
+
+</body>
+
+
+</html>

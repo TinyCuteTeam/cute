@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            width: 800px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .flex>div {
+            flex: 1;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .round {
+            border: 1px solid black;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        span {
+            font-size: 10px;
+        }
+
+
+
+        blue {
+            color: blue;
+        }
+
+        .btn {
+            border: 1px solid black;
+            background-color: white;
+            width: 150px;
+            height: 50px;
+            border-radius: 15px;
+            position: absolute;
+            right: 0px;
+            bottom: -60px;
+        }
+
+        .btn:hover {
+            background-color: skyblue;
+            color: black;
+        }
+
+        .chk {
+            position: relative;
+            left: -50px;
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="flex">
+            <div>거래처</div>
+            <div>발주일<span>▼</span></div>
+            <div>출고예정일<span>▼</span></div>
+            <div>박스(Box)</div>
+            <div>개수(EA)</div>
+        </div>
+
+        <div class="flex round">
+            <input type="checkbox" class="chk">
+            <div>
+                <blue>(주)지앤시</blue>
+            </div>
+            <div>24.07.18</div>
+            <div>24.07.26</div>
+            <div>3</div>
+            <div>120</div>
+        </div>
+
+        <div class="flex round">
+            <input type="checkbox" class="chk">
+            <div>
+                <blue>(주)지앤시</blue>
+            </div>
+            <div>24.07.18</div>
+            <div>24.07.26</div>
+            <div>3</div>
+            <div>120</div>
+        </div>
+
+        <div class="flex round">
+            <input type="checkbox" class="chk">
+            <div>
+                <blue>(주)지앤시</blue>
+            </div>
+            <div>24.07.18</div>
+            <div>24.07.26</div>
+            <div>3</div>
+            <div>120</div>
+        </div>
+
+        <div class="flex round">
+            <input type="checkbox" class="chk">
+            <div>
+                <blue>(주)지앤시</blue>
+            </div>
+            <div>24.07.18</div>
+            <div>24.07.26</div>
+            <div>3</div>
+            <div>120</div>
+        </div>
+        <button class="btn"> 출하확인</button>
+    </div>
+
+</body>
+
+<script>
+    let btn = document.querySelector(".btn")
+    btn.addEventListener("click", function () {
+        alert("출하성공!")
+    })
+</script>
+
+</html>
