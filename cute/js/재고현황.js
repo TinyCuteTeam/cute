@@ -93,6 +93,7 @@ function displayTablePage(page) {
     const end = start + itemsPerPage;
     const paginatedItems = products.slice(start, end);
 
+    // 자바스크립트로 품목별 내용 표로 가져오기
     paginatedItems.forEach(product => {
         const row = document.createElement("tr");
         row.innerHTML = `
@@ -109,6 +110,9 @@ function displayTablePage(page) {
     });
 }
 
+// 페이지 버튼을 눌렀을때 페이지가 넘어가고 내용별로(배열)로 끊어서
+// 페이지에 들어갈 내용을 알아서 맞춰서 넘어가도록
+// 자바스크립트 구성
 function setupPagination() {
     const pagination = document.querySelector(".pagination");
     const pageCount = Math.ceil(products.length / itemsPerPage);
