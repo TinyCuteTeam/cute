@@ -21,7 +21,7 @@ editButtons.forEach(function (button) {
                     cells[i].textContent = inputField.value;
                 }
             }
-            button.querySelector('img').src = 'https://cdn-icons-png.flaticon.com/512/764/764599.png';
+            button.querySelector('img').src = '/image/edit.png';
             button.classList.remove('editing');
         } else {
             // 수정 로직
@@ -34,7 +34,7 @@ editButtons.forEach(function (button) {
                 currentCell.textContent = '';
                 currentCell.appendChild(inputField);
             }
-            button.querySelector('img').src = 'https://static-00.iconduck.com/assets.00/save-icon-2048x2048-iovw4qr4.png';
+            button.querySelector('img').src = '/image/save.webp';
             button.classList.add('editing');
         }
     });
@@ -57,8 +57,8 @@ document.querySelector('.addBtn').addEventListener('click', function () {
     // newRow.insertCell(2).innerHTML = `<input type="file" class="real-upload" accept="image/*" required multiple>`;
     // newRow.insertCell(2).innerHTML = `이미지`;
     // newRow.insertCell(2).innerHTML = `<img src=" ' +imageLink.vlaue + '" style="width:50px: height:50px;">`;
-    newRow.insertCell(3).innerHTML = `<button class="editButton"><img class="pen" src="https://cdn-icons-png.flaticon.com/512/764/764599.png"></button>`;
-    newRow.insertCell(4).innerHTML = `<button class="delButton"><img class="bin" src="https://cdn-icons-png.flaticon.com/512/484/484662.png"></button>`;
+    newRow.insertCell(3).innerHTML = `<button class="editButton"><img class="pen" src="/image/edit.png"></button>`;
+    newRow.insertCell(4).innerHTML = `<button class="delButton"><img class="bin" src="/image/delete.png"></button>`;
 
     document.getElementById('srForm').reset();
 
@@ -81,7 +81,7 @@ document.querySelector('.addBtn').addEventListener('click', function () {
                     cells[i].textContent = inputField.value;
                 }
             }
-            button.querySelector('img').src = 'https://cdn-icons-png.flaticon.com/512/764/764599.png';
+            button.querySelector('img').src = '/image/edit.png';
             button.classList.remove('editing');
         } else {
             // 수정 로직
@@ -104,7 +104,7 @@ document.querySelector('.addBtn').addEventListener('click', function () {
             cells[2].innerHTML += `<img src=" ' +imageLink.vlaue + '" style="width:50px: height:50px;">`
             // cells[2].innerHTML += `<img src=" " style="width:50px: height:50px;">`
             // newRow.insertCell(2).innerHTML = `<img src=" ' +imageLink.vlaue + '" style="width:50px: height:50px;">`;
-            button.querySelector('img').src = 'https://static-00.iconduck.com/assets.00/save-icon-2048x2048-iovw4qr4.png';
+            button.querySelector('img').src = '/image/save.webp';
             button.classList.add('editing');
         }
     });

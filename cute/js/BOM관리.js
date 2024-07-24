@@ -36,7 +36,7 @@
                         cells[i].textContent = inputField.value;
                     }
                 }
-                button.querySelector('img').src = 'https://cdn-icons-png.flaticon.com/512/764/764599.png';
+                button.querySelector('img').src = '/image/edit.png';
                 button.classList.remove('editing');
             } else {
                 // 수정 로직
@@ -49,7 +49,7 @@
                     currentCell.textContent = '';
                     currentCell.appendChild(inputField);
                 }
-                button.querySelector('img').src = 'https://static-00.iconduck.com/assets.00/save-icon-2048x2048-iovw4qr4.png';
+                button.querySelector('img').src = '/image/save.webp';
                 button.classList.add('editing');
             }
         });
@@ -74,16 +74,16 @@
         newRow.insertCell(2).innerHTML = `수량`;
         newRow.insertCell(3).innerHTML = `단위`;
         newRow.insertCell(4).innerHTML = `비고`;
-        newRow.insertCell(5).innerHTML = `<button class="editButton"><img class="pen" src="https://cdn-icons-png.flaticon.com/512/764/764599.png"></button>`;
-        newRow.insertCell(6).innerHTML = `<button class="delButton"><img class="bin" src="https://cdn-icons-png.flaticon.com/512/484/484662.png"></button>`;
+        newRow.insertCell(5).innerHTML = `<button class="editButton"><img class="pen" src="/image/edit.png"></button>`;
+        newRow.insertCell(6).innerHTML = `<button class="delButton"><img class="bin" src="/image/delete.png"></button>`;
 
         newRow1.insertCell(0).innerHTML = `코드`;
         newRow1.insertCell(1).innerHTML = `품목명`;
         newRow1.insertCell(2).innerHTML = `수량`;
         newRow1.insertCell(3).innerHTML = `단위`;
         newRow1.insertCell(4).innerHTML = `비고`;
-        newRow1.insertCell(5).innerHTML = `<button class="editButton"><img class="pen" src="https://cdn-icons-png.flaticon.com/512/764/764599.png"></button>`;
-        newRow1.insertCell(6).innerHTML = `<button class="delButton"><img class="bin" src="https://cdn-icons-png.flaticon.com/512/484/484662.png"></button>`;
+        newRow1.insertCell(5).innerHTML = `<button class="editButton"><img class="pen" src="/image/edit.png"></button>`;
+        newRow1.insertCell(6).innerHTML = `<button class="delButton"><img class="bin" src="/image/delete.png"></button>`;
 
         document.getElementById('srForm').reset();
 
@@ -111,7 +111,7 @@
                         cells[i].textContent = inputField.value;
                     }
                 }
-                button.querySelector('img').src = 'https://cdn-icons-png.flaticon.com/512/764/764599.png';
+                button.querySelector('img').src = "/image/edit.png";
                 button.classList.remove('editing');
             } else {
                 // 수정 로직
@@ -124,7 +124,7 @@
                     currentCell.textContent = '';
                     currentCell.appendChild(inputField);
                 }
-                button.querySelector('img').src = 'https://static-00.iconduck.com/assets.00/save-icon-2048x2048-iovw4qr4.png';
+                button.querySelector('img').src = "/image/save.webp";
                 button.classList.add('editing');
             }
         });
@@ -143,7 +143,7 @@
                         cells[i].textContent = inputField.value;
                     }
                 }
-                button.querySelector('img').src = 'https://cdn-icons-png.flaticon.com/512/764/764599.png';
+                button.querySelector('img').src="/image/edit.png";
                 button.classList.remove('editing');
             } else {
                 // 수정 로직
@@ -156,7 +156,7 @@
                     currentCell.textContent = '';
                     currentCell.appendChild(inputField);
                 }
-                button.querySelector('img').src = 'https://static-00.iconduck.com/assets.00/save-icon-2048x2048-iovw4qr4.png';
+                button.querySelector('img').src = '/image/save.webp';
                 button.classList.add('editing');
             }
         });
