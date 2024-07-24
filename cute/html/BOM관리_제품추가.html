@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandoo</title>
+    <link rel="stylesheet" href="/css/BOM관리_제품추가.css">
+</head>
+
+<body>
+    <div class="sr_grey">
+        <h1 style="text-align: center;">레시피 관리 - 제품추가</h1>
+
+        <!--sr_mandoo: 레시피선택, 1개기준, 플러스버튼 -->
+        <div class="sr_mandoo">
+           
+            1개 기준
+            <!-- save이미지 -->
+            <button type="button" class="addBtn">
+                <img class="save" src="/image/save.webp">
+            </button>
+        </div>
+
+        <br>
+        <!-- 제품정보 작성 테이블 -->
+        <table class="productInfo" border="solid black 1px;">
+            <tr>
+                <th class="srTh">제품코드</th>
+                <th class="srTh">제품명</th>
+            </tr>
+            <!-- 여기가 내용 작성하는 곳이 될 예정 -->
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+
+            <br>
+        <!-- 재료작성 테이블 -->
+        <table class="ingreInfo" border="solid black 1px;">
+            <tr>
+                <th class="srTh">품목코드</th>
+                <th class="srTh">품목명</th>
+                <th class="srTh">수량</th>
+                <th class="srTh">단위</th>
+                <th class="srTh">비고</th>
+            </tr>
+            <!-- 여기가 내용 작성하는 곳이 될 예정 -->
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  
+                </tr>
+            </table>
+        
+        <div style="display: none;">
+            <form id="srForm">
+                <input type="text" class="code" placeholder="품목코드">
+                <input type="text" class="name" placeholder="품목명">
+                <input type="text" class="amount" placeholder="수량">
+                <input type="text" class="unit" placeholder="단위">
+                <input type="text" class="etc" placeholder="비고">
+            </form>
+        </div>
+
+    </div>
+</body>
+
+<script src="/js/BOM관리_제품추가.js">
+</script>
+
+</html>

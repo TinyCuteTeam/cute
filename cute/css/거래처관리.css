@@ -1,0 +1,56 @@
+/* 배경 */
+.sr_back {
+    /* background-color: grey; */
+    width: 1000px;
+}
+
+/* 거래처(회사명)만 파란글씨 */
+blue {
+    color: blue;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* width 800에서 1000으로 수정함 */
+    width: 1000px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 13px;
+}
+
+.flex>div {
+    flex: 1;
+    text-align: center;
+    line-height: 50px;
+}
+
+.round {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* 등록버튼 */
+.mbtn11 {
+    background-color: hsl(220, 91%, 74%);
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 80px;
+    height: 40px;
+}
+
+.mbtn11:hover {
+    /* 등록버튼에 마우스가 올라가면 색이 바뀜 */
+    background-color: white;
+}
+
+.mfont div {
+    font-size: 15px;
+}
+
+input[type="text"] {
+    width: 100px;
+}
