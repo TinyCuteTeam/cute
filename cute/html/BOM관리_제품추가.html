@@ -18,7 +18,7 @@
             1개 기준
             <!-- save이미지 -->
             <button type="button" class="addBtn">
-                <img class="save" src="/image/save.webp">
+                <img class="save" src="/image/save.webp" alt="제품추가">
             </button>
         </div>
 
@@ -36,6 +36,9 @@
                 </tr>
             </table>
 
+            <button class="ingrebutt mho" type="button" onclick="addIngredient()">재료추가</button>
+            <!-- <button class="ingrebutt" type="button" onclick="addIngredient()"><img src="/image/plus.png"></button> -->
+
             <br>
         <!-- 재료작성 테이블 -->
         <table class="ingreInfo" border="solid black 1px;">
@@ -45,6 +48,7 @@
                 <th class="srTh">수량</th>
                 <th class="srTh">단위</th>
                 <th class="srTh">비고</th>
+                <th class="srTh">작업</th>
             </tr>
             <!-- 여기가 내용 작성하는 곳이 될 예정 -->
                 <tr>
@@ -53,7 +57,7 @@
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
-                  
+                    <td><button onclick="deleteRow(this)">삭제</button></td>
                 </tr>
                 <tr>
                     <td><input type="text"></td>
@@ -61,7 +65,7 @@
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
-                  
+                    <td><button onclick="deleteRow(this)">삭제</button></td>
                 </tr>
                 <tr>
                     <td><input type="text"></td>
@@ -69,7 +73,7 @@
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
-                  
+                    <td><button onclick="deleteRow(this)">삭제</button></td>
                 </tr>
                 <tr>
                     <td><input type="text"></td>
@@ -77,7 +81,7 @@
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
-                  
+                    <td><button onclick="deleteRow(this)">삭제</button></td>
                 </tr>
                 <tr>
                     <td><input type="text"></td>
@@ -85,7 +89,7 @@
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
-                  
+                    <td><button onclick="deleteRow(this)">삭제</button></td>
                 </tr>
             </table>
         
