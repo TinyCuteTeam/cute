@@ -51,9 +51,6 @@ input[type="text"]{
     font-size: 15px;
 }
 
-div{
-    font-size: 13px;
-}
 
 .add{
     margin-top: 10px;
@@ -76,7 +73,6 @@ div{
 }
 
 .make{
-    border: 1px solid red;
     width: 500px;
     height: 500px;
 }

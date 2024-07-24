@@ -19,27 +19,13 @@ blue{
     font-weight: 700;
 }
 
-.black{
-    color: black;
-    font-weight: 700;
-}
-
 .flex {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    margin-top: 10px;
     width: 800px;
     height: 50px;
     line-height: 50px;
-}
-
-.mfont div{
-    font-size: 15px;
-}
-
-div{
-    font-size: 14px;
 }
 
 .flex>div {
@@ -54,6 +40,10 @@ div{
     margin-bottom: 30px;
 }
 
+.mfont div{
+    font-size: 15px;
+}
+
 .mnum{
     display: inline-block;
     position: absolute;
@@ -64,35 +54,6 @@ div{
     margin: 10px;
 }
 
-.sr_search{
-    width: 1000px;
-    /* text-align: center; */
-    width:50%;
-    margin:auto;
-}
-
-.sr_search_text{
-    border: 1px solid black;
-    border-radius: 30px;
-    width: 400px;
-    height: 40px;
-    position: relative;
-    top: 40px;
-    right: 100px;
-}
-
-.sr_searchbar{
-    width: 20px;
-    height: 20px;
-    position: relative;
-    top: 45px;
-    right: 80px;
-}
-
-.sr_button{
-    background-color: hsl(220, 91%, 74%);
-    border-radius:30px;
-    font-size:15px;
-    width: 80px;
-    height: 40px;
+.main {
+    font-size: 14px;
 }
