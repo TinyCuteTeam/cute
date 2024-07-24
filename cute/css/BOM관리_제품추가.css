@@ -46,3 +46,20 @@
         background-color: #e6e6e6;
         height: 50px;
     }
+
+    .ingrebutt{
+        margin-top: 30px;
+        margin-bottom: 5px;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    .mho:link {
+        color: initial; /* 기본 링크 색상 */
+        text-decoration: none; /* 기본 밑줄 제거 */
+    }
+    .mho:visited {
+        color: initial; /* .방문한 링크 색상 */
+        text-decoration: none; /* 방문한 링크 밑줄 제거 */
+    }
