@@ -1,0 +1,47 @@
+/* 전체 div */
+.errorwrap {
+    width: 800px;
+    text-align: center;
+    padding-left: 50px;
+}
+
+/* 타이틀 */
+.errortitle {
+    width: 578px;
+    text-align: center;
+
+    margin: 30px 0;
+}
+.errortext {
+    font-size: 30px;
+    text-align: center;
+}
+
+/* 버튼 */
+.errorbtn {
+    /* font-size: 15px; */
+    text-align: right;
+}
+.errorfloat {
+    /* float: right; */
+    width: 570px;
+    text-align: left;
+    /* margin: 10px 0; */
+}
+
+/* 테이블 */
+.errortable {
+    border: solid black 1px;
+    border-collapse: collapse;
+}
+.errorexplain {
+    width: 500px;
+}
+.erroreditButton{
+    border:0px;
+    background-color: #ffffff;
+}
+.errordelButton{
+    border:0px;
+    background-color: #ffffff;
+}
