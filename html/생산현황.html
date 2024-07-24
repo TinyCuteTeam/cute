@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생산현황</title>
+    <link rel="stylesheet" href="/css/생산현황.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="progress-home">
+        <div class="progress-mandoo">
+            <select class="progress-pick" id="progress-select">
+                <option value="all">전체</option>
+                <option value="b1">000001/비비고 왕교자</option>
+                <option value="b2">000002/비비고 새우만두</option>
+                <option value="b3">000003/비비고 군만두</option>
+            </select>
+        </div>
+        <!-- 첫 번째 진행 바 -->
+        <div class="probar" id="b1">
+            <div class="progress-explain">
+                <span>1차 생산</span>
+                <span>2차 생산</span>
+                <span>포장</span>
+                <span>검수</span>
+                <span>출하</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-line-container">
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="procount">
+                <img src="/image/갱신.png" class="pro-restart">
+                <br>
+                <span>생산 수량 | 20 BOX</span><br>
+                <span>불량 수량 | 1 BOX</span>
+            </div>
+        </div>
+        <!-- 두 번째 진행 바 -->
+        <div class="probar" id="b2" style="display: none;">
+            <div class="progress-explain">
+                <span>1차 생산</span>
+                <span>2차 생산</span>
+                <span>포장</span>
+                <span>검수</span>
+                <span>출하</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-line-container">
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="procount">
+                <img src="/image/갱신.png" class="pro-restart">
+                <br>
+                <span>생산 수량 | 30 BOX</span><br>
+                <span>불량 수량 | 3 BOX</span>
+            </div>
+        </div>
+        <!-- 세 번째 진행 바 -->
+        <div class="probar" id="b3" style="display: none;">
+            <div class="progress-explain">
+                <span>1차 생산</span>
+                <span>2차 생산</span>
+                <span>포장</span>
+                <span>검수</span>
+                <span>출하</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-line-container">
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-line"></div>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="procount">
+                <img src="/image/갱신.png" class="pro-restart">
+                <br>
+                <span>생산 수량 | 5 BOX</span><br>
+                <span>불량 수량 | 0 BOX</span>
+            </div>
+        </div>
+    </div>
+    <script src="/js/생산현황.js">
+        
+    </script>
+</body>
+</html>
