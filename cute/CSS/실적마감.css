@@ -1,0 +1,24 @@
+.doughnut {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+}
+
+.linec {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+.select {
+    position: absolute;
+    top: 22%;
+    left: 20%;
+}
+
+._select {
+
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
