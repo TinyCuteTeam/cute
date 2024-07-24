@@ -5,7 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandoo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .pic {
+            width: 120px;
+            height: 140px;
+        }
+
+        .grey {
+            background-color: #E6E6E6;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            width: 1000px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        tr {
+            height: 40px;
+        }
+
+        .g_top,
+        .g_bottom {
+            margin-bottom: 20px;
+        }
+
+        .g_change {
+            text-align: right;
+        }
+
+        .gwrap {
+            width: 1000px;
+        }
+
+        .g_pbtn {
+            background-color: #E6E6E6;
+            border: 1px solid black;
+            padding: 5px 20px;
+            font-weight: 700;
+            border-radius: 5px;
+            height: 40px;
+        }
+
+        .g_pbtn:hover{
+            background-color: #25c725;
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -25,10 +75,10 @@
 
         <!-- 카테고리 -->
         <div class="category-item">
-            <a href="/HTML/품목코드조회.html" class="category-link">기준관리</a>
+            <a href="/HTML/품목코드조회.html" class="category-link title">기준관리</a>
             <div class="_category">
                 <a href="/HTML/품목코드조회.html" class="category-link">품목 코드 조회</a><br>
-                <a href="/HTML/BOM.html" class="category-link">BOM(레시피관리)</a><br>
+                <a href="/HTML/BOM.html" class="category-link title">BOM(레시피관리)</a><br>
                 <a href="/HTML/거래처관리.html" class="category-link">거래처 관리</a><br>
             </div>
         </div>
@@ -78,20 +128,28 @@
             </a>
 
             <div class="_category">
-                <a href="/HTML/마이페이지.html">마이페이지</a> <br>
-                <a href="/HTML/계정관리.html">계정관리</a><br>
-                <a href="/HTML/사내게시판.html">사내게시판</a>
+                <a href="마이페이지.html">마이페이지</a> <br>
+                <a href="계정관리">계정관리</a><br>
+                <a href="사내게시판">사내게시판</a>
             </div>
 
         </div>
 
     </div>
 
-    <!-- 내용페이지  -->
-    <div class="content">
-        <div id="content-display">정보가 없습니다.❌</div>
+    <!-- 사이드바 -->
+    <div class="sidebar">
+        <ul id="sidebar-content">
+            <li><a href="/HTML/품목코드조회.html" class="category-link">품목 코드 조회</a></li>
+            <li><a href="/HTML/BOM.html" class="category-link title">BOM(레시피관리)</a></li>
+            <li><a href="/HTML/거래처관리.html" class="category-link">거래처 관리</a></li>
+        </ul>
     </div>
 
+    <!-- 내용페이지  -->
+    <div class="content">
+        <div id="content-display">BOM</div>
+    </div>
 </body>
 
 </html>
