@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피관리-제품추가</title>
+    <style>
+        /* 배경 */
+        .sr_grey {
+            width: 1000px;
+            height: 700px;
+        }
+
+        .sr_mandoo {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 50px;
+            width: 1000px;
+        }
+
+        #recipeSelect {
+            padding: 5px 20px;
+            font-weight: 700;
+            border-radius: 5px;
+        }
+
+        /* 추가버튼 */
+        .addBtn {
+            border: 0px;
+            background-color: white;
+        }
+
+        /* 플러스이미지 */
+        /* save 이미지로 변경 */
+        .plus {
+            width: 30px;
+        }
+
+        .productInfo{
+            border-collapse: collapse;
+            width:40%;
+            text-align: center;
+        }
+
+        .ingreInfo{
+            border-collapse: collapse;
+            width:1000px;
+            text-align: center;
+        } 
+        
+        /* 테이블헤드 색상, 크기 설정 */
+        .srTh {
+            background-color: #e6e6e6;
+            height: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="sr_grey">
+        <h1 style="text-align: center;">레시피 관리 - 제품추가</h1>
+
+        <!--sr_mandoo: 레시피선택, 1개기준, 플러스버튼 -->
+        <div class="sr_mandoo">
+           
+            1개 기준
+            <!-- save이미지 -->
+            <button type="button" class="addBtn">
+                <img class="plus" src="https://images-ext-1.discordapp.net/external/2EXMatTaGwyD_9Ukuu6AwceT0mKeD7UbTzql_zLVETM/https/static-00.iconduck.com/assets.00/save-icon-2048x2048-iovw4qr4.png?format=webp&quality=lossless&width=640&height=640">
+            </button>
+        </div>
+
+        <br>
+        <!-- 제품정보 작성 테이블 -->
+        <table class="productInfo" border="solid black 1px;">
+            <tr>
+                <th class="srTh">제품코드</th>
+                <th class="srTh">제품명</th>
+            </tr>
+            <!-- 여기가 내용 작성하는 곳이 될 예정 -->
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+
+            <br>
+        <!-- 재료작성 테이블 -->
+        <table class="ingreInfo" border="solid black 1px;">
+            <tr>
+                <th class="srTh">품목코드</th>
+                <th class="srTh">품목명</th>
+                <th class="srTh">수량</th>
+                <th class="srTh">단위</th>
+                <th class="srTh">비고</th>
+            </tr>
+            <!-- 여기가 내용 작성하는 곳이 될 예정 -->
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  
+                </tr>
+            </table>
+        
+        <div style="display: none;">
+            <form id="srForm">
+                <input type="text" class="code" placeholder="품목코드">
+                <input type="text" class="name" placeholder="품목명">
+                <input type="text" class="amount" placeholder="수량">
+                <input type="text" class="unit" placeholder="단위">
+                <input type="text" class="etc" placeholder="비고">
+            </form>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    // 고기만두가 선택되었을 때 고기만두 테이블이 나오도록 
+    // 김치테이블을 display none 해두기 
+    document.getElementById('recipeSelect').addEventListener('change', function () {
+        let kimchidiv = document.querySelector('.kimchi');
+        let meatdiv = document.querySelector('.meat');
+
+        // 선택된 값에 따라 해당 div 보이기
+        if (this.value === 'kimchi') {
+            meatdiv.style.display = 'none';
+            kimchidiv.style.display = 'table';
+        } else if (this.value === 'meat') {
+            kimchidiv.style.display = 'none';
+            meatdiv.style.display = 'table';
+        }
+    });
+
+    //삭제 누르면 표 한줄이 삭제되도록 
+    document.querySelectorAll(".delButton").forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            event.currentTarget.parentNode.parentNode.remove();
+        });
+    });
+    // 수정 버튼 클릭 시 수정할 수 있는 입력 필드 생성
+    let editButtons = document.querySelectorAll(".editButton");
+    editButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            let tableRow = event.currentTarget.parentNode.parentNode;
+            let cells = tableRow.querySelectorAll('td');
+            let isEditing = button.classList.contains('editing');
+
+            if (isEditing) {
+                // 저장 로직
+                for (let i = 0; i < cells.length - 2; i++) {
+                    let inputField = cells[i].querySelector('input');
+                    if (inputField) {
+                        cells[i].textContent = inputField.value;
+                    }
+                }
+                button.querySelector('img').src = 'https://cdn-icons-png.flaticon.com/512/764/764599.png';
+                button.classList.remove('editing');
+            } else {
+                // 수정 로직
+                for (let i = 0; i < cells.length - 2; i++) {
+                    let currentCell = cells[i];
+                    let currentValue = currentCell.textContent;
+                    let inputField = document.createElement('input');
+                    inputField.type = 'text';
+                    inputField.value = currentValue;
+                    currentCell.textContent = '';
+                    currentCell.appendChild(inputField);
+                }
+                button.querySelector('img').src = 'https://static-00.iconduck.com/assets.00/save-icon-2048x2048-iovw4qr4.png';
+                button.classList.add('editing');
+            }
+        });
+    });
+
+    //버튼 누르면 
+    document.querySelector('.addBtn').addEventListener('click', function () {
+        let code = document.querySelector('.code').value;
+        let name = document.querySelector('.name').value;
+        let amount = document.querySelector('.amount').value;
+        let unit = document.querySelector('.unit').value;
+        let etc = document.querySelector('.etc').value;
+
+        let table = document.querySelectorAll('#table');
+        let newRow = table[0].insertRow();
+        let newRow1 = table[1].insertRow();
+
+        // console.log('클릭')
+        // newRow.insertCell(0).textContent = code;
+        newRow.insertCell(0).innerHTML = `코드`;
+        newRow.insertCell(1).innerHTML = `품목명`;
+        newRow.insertCell(2).innerHTML = `수량`;
+        newRow.insertCell(3).innerHTML = `단위`;
+        newRow.insertCell(4).innerHTML = `비고`;
+        newRow.insertCell(5).innerHTML = `<button class="editButton"><img class="pen" src="https://cdn-icons-png.flaticon.com/512/764/764599.png"></button>`;
+        newRow.insertCell(6).innerHTML = `<button class="delButton"><img class="bin" src="https://cdn-icons-png.flaticon.com/512/484/484662.png"></button>`;
+
+        newRow1.insertCell(0).innerHTML = `코드`;
+        newRow1.insertCell(1).innerHTML = `품목명`;
+        newRow1.insertCell(2).innerHTML = `수량`;
+        newRow1.insertCell(3).innerHTML = `단위`;
+        newRow1.insertCell(4).innerHTML = `비고`;
+        newRow1.insertCell(5).innerHTML = `<button class="editButton"><img class="pen" src="https://cdn-icons-png.flaticon.com/512/764/764599.png"></button>`;
+        newRow1.insertCell(6).innerHTML = `<button class="delButton"><img class="bin" src="https://cdn-icons-png.flaticon.com/512/484/484662.png"></button>`;
+
+        document.getElementById('srForm').reset();
+
+        // 새로운 버튼에도 이벤트 리스너 추가
+        newRow.querySelector('.delButton').addEventListener('click', function (event) {
+            event.currentTarget.parentNode.parentNode.remove();
+        });
+
+        //고기만두 삭제
+        newRow1.querySelector('.delButton').addEventListener('click', function (event) {
+            event.currentTarget.parentNode.parentNode.remove();
+        });
+
+        newRow.querySelector('.editButton').addEventListener('click', function (event) {
+            let button = event.currentTarget;
+            let tableRow = button.parentNode.parentNode;
+            let cells = tableRow.querySelectorAll('td');
+            let isEditing = button.classList.contains('editing');
+
+            if (isEditing) {
+                // 저장 로직
+                for (let i = 0; i < cells.length - 2; i++) {
+                    let inputField = cells[i].querySelector('input');
+                    if (inputField) {
+                        cells[i].textContent = inputField.value;
+                    }
+                }
+                button.querySelector('img').src = 'https://cdn-icons-png.flaticon.com/512/764/764599.png';
+                button.classList.remove('editing');
+            } else {
+                // 수정 로직
+                for (let i = 0; i < cells.length - 2; i++) {
+                    let currentCell = cells[i];
+                    let currentValue = currentCell.textContent;
+                    let inputField = document.createElement('input');
+                    inputField.type = 'text';
+                    inputField.value = currentValue;
+                    currentCell.textContent = '';
+                    currentCell.appendChild(inputField);
+                }
+                button.querySelector('img').src = 'https://static-00.iconduck.com/assets.00/save-icon-2048x2048-iovw4qr4.png';
+                button.classList.add('editing');
+            }
+        });
+
+        newRow1.querySelector('.editButton').addEventListener('click', function (event) {
+            let button = event.currentTarget;
+            let tableRow = button.parentNode.parentNode;
+            let cells = tableRow.querySelectorAll('td');
+            let isEditing = button.classList.contains('editing');
+
+            if (isEditing) {
+                // 저장 로직
+                for (let i = 0; i < cells.length - 2; i++) {
+                    let inputField = cells[i].querySelector('input');
+                    if (inputField) {
+                        cells[i].textContent = inputField.value;
+                    }
+                }
+                button.querySelector('img').src = 'https://cdn-icons-png.flaticon.com/512/764/764599.png';
+                button.classList.remove('editing');
+            } else {
+                // 수정 로직
+                for (let i = 0; i < cells.length - 2; i++) {
+                    let currentCell = cells[i];
+                    let currentValue = currentCell.textContent;
+                    let inputField = document.createElement('input');
+                    inputField.type = 'text';
+                    inputField.value = currentValue;
+                    currentCell.textContent = '';
+                    currentCell.appendChild(inputField);
+                }
+                button.querySelector('img').src = 'https://static-00.iconduck.com/assets.00/save-icon-2048x2048-iovw4qr4.png';
+                button.classList.add('editing');
+            }
+        });
+    });
+
+
+</script>
+
+</html>
