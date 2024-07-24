@@ -2,81 +2,81 @@ const products = [
     {
         "품목코드": "000001", 
         "품목명": "비비고 왕교자", 
-        "이미지코드": "/imge/비비고왕교자.jpg", 
+        "이미지코드": "/image/비비고왕교자.jpg", 
         "재고수량": 150, "가용수량": 120
     },
     {
         "품목코드": "000002", 
         "품목명": "비비고 새우만두", 
-        "이미지코드": "/imge/비비고새우만두.jpg", 
+        "이미지코드": "/image/비비고새우만두.jpg", 
         "재고수량": 200, "가용수량": 180
     },
     {
         "품목코드": "000003", 
         "품목명": "비비고 군만두", 
-        "이미지코드": "/imge/비비고군만두.webp", 
+        "이미지코드": "/image/비비고군만두.webp", 
         "재고수량": 100, "가용수량": 75
     },
     {
         "품목코드": "000004", 
         "품목명": "비비고 김치만두", 
-        "이미지코드": "/imge/비비고김치만두.webp", 
+        "이미지코드": "/image/비비고김치만두.webp", 
         "재고수량": 120, "가용수량": 100
     },
     {
         "품목코드": "000005", 
         "품목명": "비비고 고기만두", 
-        "이미지코드": "/imge/비비고고기만두.jpg", 
+        "이미지코드": "/image/비비고고기만두.jpg", 
         "재고수량": 130, "가용수량": 110
     },
     {
         "품목코드": "000006", 
         "품목명": "비비고 찐만두", 
-        "이미지코드": "/imge/비비고찐만두.jpg", 
+        "이미지코드": "/image/비비고찐만두.jpg", 
         "재고수량": 90, 
         "가용수량": 70
     },
     {
         "품목코드": "000007", 
         "품목명": "비비고 야채만두", 
-        "이미지코드": "/imge/비비고야채만두.webp", 
+        "이미지코드": "/image/비비고야채만두.webp", 
         "재고수량": 160, "가용수량": 140
     },
     {
         "품목코드": "000008", 
         "품목명": "비비고 매운만두", 
-        "이미지코드": "/imge/비비고매운만두.webp", 
+        "이미지코드": "/image/비비고매운만두.webp", 
         "재고수량": 80, "가용수량": 60
     },
     {
         "품목코드": "000009", 
         "품목명": "비비고 해물만두", 
-        "이미지코드": "/imge/비비고해물만두.png", 
+        "이미지코드": "/image/비비고해물만두.png", 
         "재고수량": 110, "가용수량": 90
     },
     {
         "품목코드": "000010", 
         "품목명": "비비고 고추만두", 
-        "이미지코드": "/imge/비비고고추만두.webp", 
+        "이미지코드": "/image/비비고고추만두.webp", 
         "재고수량": 70, 
         "가용수량": 50},
     {
         "품목코드": "000011", 
         "품목명": "비비고 스프링롤", 
-        "이미지코드": "/imge/비비고스프링롤.png", 
+        "이미지코드": "/image/비비고스프링롤.png", 
         "재고수량": 140, 
         "가용수량": 120
     },
     {
         "품목코드": "000012", 
         "품목명": "비비고 두부만두", 
-        "이미지코드": "/imge/비비고두부만두.webp", 
+        "이미지코드": "/image/비비고두부만두.webp", 
         "재고수량": 75, "가용수량": 50
     },
     {
         "품목코드": "000014", 
         "품목명": "비비고 불고기만두", 
-        "이미지코드": "/imge/비비고불고기만두.webp", 
+        "이미지코드": "/image/비비고불고기만두.webp", 
         "재고수량": 85, 
         "가용수량": 70
     }
@@ -104,8 +104,8 @@ function displayTablePage(page) {
             </td>
             <td style="width:100px">${product.재고수량}</td>
             <td style="width:100px">${product.가용수량}</td>
-            <td style="width:100px"><img class="ad1 edit" src="/imge/수정.png"></td>
-            <td style="width:100px"><img class="ad2 del" src="/imge/삭제.png"></td>`;
+            <td style="width:100px"><img class="ad1 edit" src="/image/수정.png"></td>
+            <td style="width:100px"><img class="ad2 del" src="/image/삭제.png"></td>`;
         tableBody.appendChild(row);
     });
 }
@@ -207,7 +207,7 @@ document.body.addEventListener("click", function (event) {
                     cell.appendChild(input);
                 }
             });
-            event.target.innerHTML = `<img class="ad1 edit" src="/imge/수정.png">`;
+            event.target.innerHTML = `<img class="ad1 edit" src="/image/수정.png">`;
             event.target.classList.remove("edit");
             event.target.classList.add("save");
         }
