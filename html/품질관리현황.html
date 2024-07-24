@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>품질관리현황</title>
+    <link rel="stylesheet" href="/css/품질관리현황.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="quality-home">
+        <div class="quality-mandoo">
+            <select class="quality-pick" id="quality-select">
+                <option value="all">전체</option>
+                <option value="b1">000001/비비고 왕교자</option>
+                <option value="b2">000002/비비고 새우만두</option>
+                <option value="b3">000003/비비고 군만두</option>
+            </select>
+        </div>
+        <!-- 첫 번째 진행 바 -->
+        <div class="qualbar" id="b1">
+            <div class="quality-explain">
+                <span>1차 검수</span>
+                <span>2차 검수</span>
+                <span>검수 완료</span>
+            </div>
+            <div class="quality-container">
+                <div class="quality-line-container">
+                    <div class="quality-line"></div>
+                    <div class="quality-line"></div>
+                    <div class="quality-line"></div>
+                </div>
+                <div class="quality-bar"></div>
+            </div>
+            <div class="qualcount">
+                <img src="/image/갱신.png" class="quality-restart">
+                <span class="qual-state">적합</span>
+            </div>
+        </div>
+        <!-- 두 번째 진행 바 -->
+        <div class="qualbar" id="b2" style="display: none;">
+            <div class="quality-explain">
+                <span>1차 검수</span>
+                <span>2차 검수</span>
+                <span>검수 완료</span>
+            </div>
+            <div class="quality-container">
+                <div class="quality-line-container">
+                    <div class="quality-line"></div>
+                    <div class="quality-line"></div>
+                    <div class="quality-line"></div>
+                </div>
+                <div class="quality-bar"></div>
+            </div>
+            <div class="qualcount">
+                <img src="/image/갱신.png" class="quality-restart">
+                <span class="qual-state">부적합</span>
+            </div>
+        </div>
+        <!-- 세 번째 진행 바 -->
+        <div class="qualbar" id="b3" style="display: none;">
+            <div class="quality-explain">
+                <span>1차 검수</span>
+                <span>2차 검수</span>
+                <span>검수 완료</span>
+            </div>
+            <div class="quality-container">
+                <div class="quality-line-container">
+                    <div class="quality-line"></div>
+                    <div class="quality-line"></div>
+                    <div class="quality-line"></div>
+                </div>
+                <div class="quality-bar"></div>
+            </div>
+            <div class="qualcount">
+                <img src="/image/갱신.png" class="quality-restart">
+                <span class="qual-state">적합</span>
+            </div>
+        </div>
+    </div>
+    <script src="/js/품질관리현황.js">
+        
+    </script>
+</body>
+</html>
