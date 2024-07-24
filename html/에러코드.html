@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에러코드</title>
+    <link rel="stylesheet" href="/css/에러코드.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- 전체 div -->
+    <div class="errorwrap">
+        
+        <!-- 타이틀 -->
+        <div class="errortitle">
+            <span class="errortext"><strong>에러 코드</strong></span>
+        </div>
+        
+        <!-- 표 -->
+        <div>
+            <table border=1 class="errortable" id="errorTable">
+                <tr>
+                    <td>오류코드</td>
+                    <td class="errorexplain">내용</td>
+                    <td>수정</td>
+                    <td>삭제</td>
+                </tr>
+                <tr>
+                    <td>E001</td>
+                    <td>재료 부족 - 만두를 만들기 위한 재료가 부족합니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E002</td>
+                    <td>만두 포장 오류 - 만두 포장 과정에서 오류가 발생했습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E003</td>
+                    <td>찜기 고장 - 찜기가 작동하지 않아 만두 조리가 불가능합니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E004</td>
+                    <td>온도 설정 오류 - 찜기 온도가 설정된 범위를 초과했습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E005</td>
+                    <td>만두 모양 불량 - 만두 모양이 일관되지 않습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E006</td>
+                    <td>조리 시간 초과 - 만두 조리 시간이 초과되었습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E007</td>
+                    <td>냉동 오류 - 만두 냉동 과정에서 문제가 발생했습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E008</td>
+                    <td>재료 혼합 오류 - 만두 속 재료가 잘 혼합되지 않았습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E009</td>
+                    <td>유통 기한 초과 - 사용하려는 만두의 유통 기한이 지났습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E010</td>
+                    <td>고객 주문 오류 - 고객의 주문이 잘못 입력되었습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E011</td>
+                    <td>속 재료 변질 - 사용하려는 만두 속 재료가 변질되었습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E012</td>
+                    <td>포장재 부족 - 만두 포장을 위한 재료가 부족합니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E013</td>
+                    <td>조리 방법 오류 - 지정된 조리 방법이 잘못되었습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E014</td>
+                    <td>품질 검사 실패 - 만두의 품질 검사에서 통과하지 못했습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+                <tr>
+                    <td>E015</td>
+                    <td>주문 처리 지연 - 고객의 주문 처리에 지연이 발생했습니다.</td>
+                    <td><button class="erroreditButton"><img src="https://cdn-icons-png.flaticon.com/512/764/764599.png" style="width: 10px;"></button></td>
+                    <td><button class="errordelButton"><img src="https://cdn-icons-png.flaticon.com/512/484/484662.png" style="width: 10px;"></button></td>
+                </tr>
+            </table>
+
+            <!-- 버튼 -->
+            <div class="errorfloat">
+                <button type="text" class="errorbtn" id="addButton">추가</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/js/에러코드.js">
+        
+    </script>
+</body>
+</html>
