@@ -1,12 +1,4 @@
-﻿
-
-
-
-
-
-
-// 직선차트
-
+﻿// 직선차트
 new Chart(document.getElementById("line-chart"), {
     type: 'line',
     data: {
@@ -43,7 +35,9 @@ new Chart(document.getElementById("line-chart"), {
         title: {
             display: true,
             text: '주간 생산량'
-        }
+        },
+        responsive: true,
+        maintainAspectRatio: false
     }
 });
 
@@ -64,6 +58,8 @@ new Chart(document.getElementById("doughnut-chart"), {
         title: {
             display: true,
             text: '주간 생산량'
-        }
+        },
+        responsive: true,
+        maintainAspectRatio: false
     }
 });

@@ -1,11 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="kor">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandoo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/계정관리.css">
+    <style>
+
+    </style>
+
 </head>
 
 <body>
@@ -33,10 +38,10 @@
             </div>
         </div>
         <div class="category-item">
-            <a href="/HTML/발주확인.html" class="category-link title">생산계획</a>
+            <a href="/HTML/발주확인.html" class="category-link">생산계획</a>
             <div class="_category">
                 <a href="/HTML/발주확인.html" class="category-link">발주확인</a> <br>
-                <a href="/HTML/작업지시서(관리자용).html" class="category-link title">작업지시서 작성</a> <br>
+                <a href="/HTML/작업지시서(관리자용).html" class="category-link">작업지시서 작성</a> <br>
                 <a href="/HTML/작업지시서(작업자용).html" class="category-link">작업지시서 확인</a> <br>
                 <a href="/HTML/작업지시서조회.html" class="category-link">작업지시서 조회</a> <br>
             </div>
@@ -78,9 +83,9 @@
             </a>
 
             <div class="_category">
-                <a href="마이페이지">마이페이지</a> <br>
-                <a href="계정관리">계정관리</a><br>
-                <a href="사내게시판">사내게시판</a>
+                <a href="마이페이지.html" class="category-link ">마이페이지</a> <br>
+                <a href="사내게시판.html "class="category-link">사내게시판</a><br>
+                <a href="계정관리.html" class="category-link title">계정관리</a>
             </div>
 
         </div>
@@ -90,17 +95,73 @@
     <!-- 사이드바 -->
     <div class="sidebar">
         <ul id="sidebar-content">
-            <li><a href="/HTML/발주확인.html" class="category-link">발주확인</a></li>
-            <li><a href="/HTML/작업지시서(관리자용).html" class="category-link title">작업지시서(관리자용)</a></li>
-            <li><a href="/HTML/작업지시서(작업자용).html" class="category-link">작업지시서(작업자용)</a></li>
-            <li><a href="/HTML/작업지시서조회.html" class="category-link">작업지시서 조회</a></li>
+            <li><a href="/HTML/마이페이지.html" class="category-link">마이페이지</a></li>
+            <li><a href="/HTML/사내게시판.html" class="category-link">사내게시판</a></li>
+            <li><a href="/HTML/계정관리.html" class="category-link  title">계정관리</a></li>
         </ul>
     </div>
 
     <!-- 내용페이지  -->
     <div class="content">
-        <div id="content-display">작업지시서(관리자용)</div>
+        <div id="content-display">
+            <div class="main">
+                <div class="flex header">
+                    <div></div>
+                    <div>사번</div>
+                    <div>이름</div>
+                    <div>연락처</div>
+                    <div>주소</div>
+                    <div>이메일</div>
+                    <div>직책</div>
+                </div>
+
+                <div class="flex round">
+                    <div><input type="checkbox" class="chk"></div>
+                    <div>111111</div>
+                    <div>박경민</div>
+                    <div>010-1212-3434</div>
+                    <div>충청남도 천안시 동남구 대흥동 134</div>
+                    <div>asdfal@gmail.com</div>
+                    <div>대리</div>
+                </div>
+
+                <div class="flex round">
+                    <div><input type="checkbox" class="chk"></div>
+                    <div>111111</div>
+                    <div>박경민</div>
+                    <div>010-1212-3434</div>
+                    <div>충청남도 천안시 동남구 대흥동 134</div>
+                    <div>asdfal@gmail.com</div>
+                    <div>대리</div>
+                </div>
+
+                <div class="flex round">
+                    <div><input type="checkbox" class="chk"></div>
+                    <div>111111</div>
+                    <div>박경민</div>
+                    <div>010-1212-3434</div>
+                    <div>충청남도 천안시 동남구 대흥동 134</div>
+                    <div>asdfal@gmail.com</div>
+                    <div>대리</div>
+                </div>
+
+                <div class="flex round">
+                    <div><input type="checkbox" class="chk"></div>
+                    <div>111111</div>
+                    <div>박경민</div>
+                    <div>010-1212-3434</div>
+                    <div>충청남도 천안시 동남구 대흥동 134</div>
+                    <div>asdfal@gmail.com</div>
+                    <div>대리</div>
+                </div>
+            </div>
+            <button class="btn">승인</button>
+            <button class="btn1">취소</button>
+        </div>
     </div>
+
+
+    <script src="/js/계정관리.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,89 @@
+.flex {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    align-items: center; /* 수직 중앙 정렬 */
+    box-sizing: border-box;
+}
+
+.flex.header {
+    font-weight: bold;
+}
+
+.flex>div {
+    text-align: center;
+    overflow: hidden; /* 텍스트가 넘칠 경우 숨기기 */
+    text-overflow: ellipsis; /* 넘친 텍스트 생략 표시(...) */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.flex>div:nth-child(1) { /* 체크박스 */
+    flex: 0 0 5%;
+}
+
+.flex>div:nth-child(2) { /* 사번 */
+    flex: 0 0 10%;
+}
+
+.flex>div:nth-child(3) { /* 이름 */
+    flex: 0 0 10%;
+}
+
+.flex>div:nth-child(4) { /* 연락처 */
+    flex: 0 0 15%;
+}
+
+.flex>div:nth-child(5) { /* 주소 */
+    flex: 0 0 30%;
+}
+
+.flex>div:nth-child(6) { /* 이메일 */
+    flex: 0 0 20%;
+}
+
+.flex>div:nth-child(7) { /* 직책 */
+    flex: 0 0 10%;
+}
+
+.round {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+span {
+    font-size: 10px;
+}
+
+.btn {
+    border: 1px solid black;
+    background-color: rgb(55, 197, 240);;
+    width: 130px;
+    height: 50px;
+    border-radius: 15px;
+    position: absolute;
+    right: 140px;
+    bottom: -50px;
+}
+
+.btn1 {
+    border: 1px solid black;
+    background-color: red;
+    width: 130px;
+    height: 50px;
+    border-radius: 15px;
+    position: absolute;
+    right: 0px;
+    bottom: -50px;
+}
+
+.btn:hover, .btn1:hover {
+    background-color: #e6e6e6;
+    color: black;
+}
+
+.chk {
+    width: 20px;
+    height: 20px;
+}

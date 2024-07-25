@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // 회원가입 폼 HTML을 가져와서 모달에 삽입
-    fetch('회원가입.html')
+    fetch('/HTML/회원가입.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('joinFormContainer').innerHTML = data;
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         alert("비밀번호를 입력하세요.");
                         pwd.focus();
                         return;
-                    } else if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{1,}$/.test(pwd.value)) {
+                    } else if (!/^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{1,}$/.test(pwd.value)) {
                         alert("비밀번호는 영어와 숫자를 포함해야 합니다.");
                         pwd.focus();
                         return;
@@ -94,6 +94,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 closeModal.addEventListener("click", function () {
                     document.getElementById('joinModal').style.display = 'none';
+                });
+
+                // 로그인 버튼 클릭 시 계정 확인
+                let login = document.querySelector(".login");
+                login.addEventListener("click", function () {
+                    const loginId = document.querySelector(".id").value;
+                    const loginPwd = document.querySelector(".password").value;
+
+                    const accounts = [
+                        { id: "admin", pwd: "admin", role: "관리자" },
+                        { id: "worker", pwd: "worker", role: "작업자" },
+                    ];
+
+                    const account = accounts.find(acc => acc.id === loginId && acc.pwd === loginPwd);
+
+                    if (account) {
+                        alert(account.role + " 계정으로 로그인 되었습니다");
+                        window.location.href = 'index.html';
+                    } else {
+                        alert("아이디 또는 비밀번호가 잘못되었습니다");
+                    }
                 });
             `;
             document.body.appendChild(script);
