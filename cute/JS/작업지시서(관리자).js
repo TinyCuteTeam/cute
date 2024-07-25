@@ -28,30 +28,8 @@ mbtn11.addEventListener("click", function(event) {
         mcontent += `<div>${minfo5}</div>`;
         mcontent += `<div>${minfo6}BOX</div>`;
         mcontent += `<div>${minfo7}</div>`;
-        mcontent += '<div class="mimg-container"><img class="add mimg" src="/image/첨부파일이모티콘.png"><div class="tooltip"><img class="make" src="/image/생산지시서.jpg"></div></div>';
+        mcontent += `<div><a href="/html/작업지시서.html"><img class="add" src ="/image/첨부파일이모티콘.png"></a></div>`
         mcontent += '</div>';
         document.querySelector("#msg").innerHTML += mcontent;
     }
 });
-
-// document.body.addEventListener("click", function(event) {
-//     if (event.target.classList.contains("mho")) {
-//         let imageUrl = "/img/작업지시서.jpg";
-//         window.open(imageUrl, '_blank');
-//     }
-// });
-
-// 마우스를 올렸을 때 툴팁 표시 기능 추가
-document.body.addEventListener("mouseenter", function(event) {
-    if (event.target.classList.contains("mimg")) {
-        let tooltip = event.target.nextElementSibling;
-        tooltip.style.display = 'block';
-    }
-}, true);
-
-document.body.addEventListener("mouseleave", function(event) {
-    if (event.target.classList.contains("mimg")) {
-        let tooltip = event.target.nextElementSibling;
-        tooltip.style.display = 'none';
-    }
-}, true);

@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandoo</title>
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/board-style.css">
-    <script src="/script.js"></script>
+    <link rel="stylesheet" href="/css/계정관리.css">
+    <style>
+
+    </style>
+
 </head>
 
 <body>
@@ -75,39 +78,90 @@
         </div>
 
         <div class="category-item">
-            <a href="/HTML/마이페이지.html"><img class="mypage-icon" src="/image/mypage.png"></a>
+            <a href="마이페이지" class="category-link">
+                <a href="/HTML/마이페이지.html"><img class="mypage-icon" src="/image/mypage.png"></a>
+            </a>
 
             <div class="_category">
-                <a href="/HTML/마이페이지.html">마이페이지</a> <br>
-                <a href="/HTML/계정관리.html">계정관리</a><br>
-                <a href="/HTML/사내게시판.html">사내게시판</a>
+                <a href="/HTML/마이페이지.html" class="category-link ">마이페이지</a> <br>
+                <a href="/HTML/계정관리.html" class="category-link title">계정관리</a><br>
+                <a href="/HTML/사내게시판.html "class="category-link">사내게시판</a><br>
             </div>
 
         </div>
 
     </div>
 
+    <!-- 사이드바 -->
+    <div class="sidebar">
+        <ul id="sidebar-content">
+            <li><a href="/HTML/마이페이지.html" class="category-link">마이페이지</a></li>
+            <li><a href="/HTML/계정관리.html" class="category-link  title">계정관리</a></li>
+            <li><a href="/HTML/사내게시판.html" class="category-link">사내게시판</a></li>
+        </ul>
+    </div>
+
     <!-- 내용페이지  -->
     <div class="content">
-        <h1>사내 게시판</h1>
-        <table id="posts-table">
-            <thead>
-                <tr>
-                    <th>번호</th>
-                    <th>카테고리</th>
-                    <th>제목</th>
-                    <th>날짜</th>
-                    <th>글쓴이</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- 게시글 목록이 여기에 추가됩니다 -->
-            </tbody>
-        </table>
+        <div id="content-display">
+            <div class="main">
+                <div class="flex header">
+                    <div></div>
+                    <div>사번</div>
+                    <div>이름</div>
+                    <div>연락처</div>
+                    <div>주소</div>
+                    <div>이메일</div>
+                    <div>직책</div>
+                </div>
+
+                <div class="flex round">
+                    <div><input type="checkbox" class="chk"></div>
+                    <div>111111</div>
+                    <div>박경민</div>
+                    <div>010-1212-3434</div>
+                    <div>충청남도 천안시 동남구 대흥동 134</div>
+                    <div>asdfal@gmail.com</div>
+                    <div>대리</div>
+                </div>
+
+                <div class="flex round">
+                    <div><input type="checkbox" class="chk"></div>
+                    <div>111111</div>
+                    <div>박경민</div>
+                    <div>010-1212-3434</div>
+                    <div>충청남도 천안시 동남구 대흥동 134</div>
+                    <div>asdfal@gmail.com</div>
+                    <div>대리</div>
+                </div>
+
+                <div class="flex round">
+                    <div><input type="checkbox" class="chk"></div>
+                    <div>111111</div>
+                    <div>박경민</div>
+                    <div>010-1212-3434</div>
+                    <div>충청남도 천안시 동남구 대흥동 134</div>
+                    <div>asdfal@gmail.com</div>
+                    <div>대리</div>
+                </div>
+
+                <div class="flex round">
+                    <div><input type="checkbox" class="chk"></div>
+                    <div>111111</div>
+                    <div>박경민</div>
+                    <div>010-1212-3434</div>
+                    <div>충청남도 천안시 동남구 대흥동 134</div>
+                    <div>asdfal@gmail.com</div>
+                    <div>대리</div>
+                </div>
+            </div>
+            <button class="btn">승인</button>
+            <button class="btn1">취소</button>
+        </div>
     </div>
 
-    </div>
 
+    <script src="/js/계정관리.js"></script>
 </body>
 
 </html>

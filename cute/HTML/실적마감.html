@@ -7,7 +7,6 @@
     <title>Mandoo</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/CSS/실적마감.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 </head>
 
 <body>
@@ -75,14 +74,12 @@
         </div>
 
         <div class="category-item">
-            <a href="마이페이지" class="category-link">
-                <img class="mypage-icon" src="/image/mypage.png">
-            </a>
+            <a href="/HTML/마이페이지.html"><img class="mypage-icon" src="/image/mypage.png"></a>
 
             <div class="_category">
-                <a href="마이페이지">마이페이지</a> <br>
-                <a href="계정관리">계정관리</a><br>
-                <a href="/HTML/사내게시판.html">사내게시판</a>
+                <a href="/HTML/마이페이지.html" class="category-link ">마이페이지</a> <br>
+                <a href="/HTML/계정관리.html" class="category-link">계정관리</a><br>
+                <a href="/HTML/사내게시판.html "class="category-link">사내게시판</a><br>
             </div>
 
         </div>
@@ -99,24 +96,26 @@
 
     <!-- 내용페이지  -->
     <div class="content">
-        <div class="select">
-            <select class="_select">
-                <option>주간</option>
-                <option>월간</option>
-                <option>분기별</option>
-            </select>
-        </div>
+        <div id="content-display">
+            <div class="select">
+                <select class="_select">
+                    <option>주간</option>
+                    <option>월간</option>
+                    <option>분기별</option>
+                </select>
+            </div>
 
-
-        <div class="linec">
-            <canvas id="line-chart" width="500" height="400"></canvas>
-        </div>
-        <div class="doughnut">
-            <canvas id="doughnut-chart" width="500" height="400"></canvas>
+            <div class="chart-container linec">
+                <canvas id="line-chart"></canvas>
+            </div>
+            <div class="chart-container doughnut">
+                <canvas id="doughnut-chart"></canvas>
+            </div>
         </div>
     </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
     <script src="/JS/실적마감.js"></script>
 </body>
-
 
 </html>
