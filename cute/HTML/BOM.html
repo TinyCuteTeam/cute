@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandoo</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/BOM.css">
 </head>
 
 <body>
@@ -74,13 +75,13 @@
 
         <div class="category-item">
             <a href="마이페이지" class="category-link">
-                <img class="mypage-icon" src="/image/mypage.png">
+                <a href="/HTML/마이페이지.html"><img class="mypage-icon" src="/image/mypage.png"></a>
             </a>
 
             <div class="_category">
-                <a href="마이페이지">마이페이지</a> <br>
-                <a href="계정관리">계정관리</a><br>
-                <a href="/HTML/사내게시판.html">사내게시판</a>
+                <a href="/HTML/마이페이지.html" class="category-link ">마이페이지</a> <br>
+                <a href="/HTML/계정관리.html" class="category-link">계정관리</a><br>
+                <a href="/HTML/사내게시판.html "class="category-link">사내게시판</a><br>
             </div>
 
         </div>
@@ -98,8 +99,261 @@
 
     <!-- 내용페이지  -->
     <div class="content">
-        <div id="content-display">BOM</div>
+        <div class="sr_grey">
+            <h1 style="text-align: center;">레시피 관리</h1>
+
+            <!--sr_mandoo: 레시피선택, 1개기준, 플러스버튼 -->
+            <div class="sr_mandoo">
+                <!-- 제품 레시피 선택  -->
+                <form>
+                    <select id="recipeSelect">
+                        <option value="kimchi">김치만두 / A00001</option>
+                        <option value="meat">고기만두 / A00002</option>
+                    </select>
+                    <button>
+                        <a class="mho" href="/html/BOM관리_제품추가.html">제품추가</a>
+                    </button>
+                </form>
+                1개 기준
+                <!-- 재료 추가버튼 -->
+                <button type="button" class="addBtn">
+                    <img class="plus" src="/image/plus.png">
+                </button>
+            </div>
+
+            <!-- 김치만두 표-->
+            <table id="table" class="sr_bom kimchi" border="solid black 1px;">
+                <tr>
+                    <th class="srTh">품목코드</th>
+                    <th class="srTh">품목명</th>
+                    <th class="srTh">수량</th>
+                    <th class="srTh">단위</th>
+                    <th class="srTh">비고</th>
+                    <th class="srTh">수정</th>
+                    <th class="srTh">삭제</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>M001</td>
+                        <td>밀가루</td>
+                        <td>500</td>
+                        <td>g</td>
+                        <td>만두피 재료</td>
+                        <!-- 수정버튼 -->
+                        <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                        <!-- 삭제버튼 -->
+                        <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                    </tr>
+                    <tr>
+                        <td>M002</td>
+                        <td>물</td>
+                        <td>200</td>
+                        <td>ml</td>
+                        <td>반죽용</td>
+                        <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                        <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                    </tr>
+                    <tr>
+                        <td>M003</td>
+                        <td>소금</td>
+                        <td>5</td>
+                        <td>g</td>
+                        <td>반죽의 맛을 위해</td>
+                        <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                        <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                    <tr>
+                        <td>M004</td>
+                        <td>다진 돼지고기</td>
+                        <td>300</td>
+                        <td>g</td>
+                        <td>만두 속 재료</td>
+                        <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                        <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                    </tr>
+                    <tr>
+                        <td>M005</td>
+                        <td>다진 양파</td>
+                        <td>100</td>
+                        <td>g</td>
+                        <td>만두 속 재료</td>
+                        <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                        <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                    </tr>
+                    <tr>
+                        <td>M015</td>
+                        <td>김치</td>
+                        <td>100</td>
+                        <td>g</td>
+                        <td>만두 속 재료</td>
+                        <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                        <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                    </tr>
+                    <tr>
+                        <td>M006</td>
+                        <td>대파</td>
+                        <td>30</td>
+                        <td>g</td>
+                        <td>만두 속 재료</td>
+                        <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                        <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                    </tr>
+                    <tr>
+                        <td>M007</td>
+                        <td>간장</td>
+                        <td>15</td>
+                        <td>ml</td>
+                        <td>만두 속 양념</td>
+                        <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                        <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                    </tr>
+                    <tr>
+                        <td>M008</td>
+                        <td>참기름</td>
+                        <td>10</td>
+                        <td>ml</td>
+                        <td>만두 속 양념</td>
+                        <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                        <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                    </tr>
+                    <tr>
+                        <td>M009</td>
+                        <td>후추</td>
+                        <td>2</td>
+                        <td>g</td>
+                        <td>만두 속 양념</td>
+                        <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                        <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                    </tr>
+                    <tr>
+                        <td>M010</td>
+                        <td>마늘</td>
+                        <td>10</td>
+                        <td>g</td>
+                        <td>만두 속 양념</td>
+                        <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                        <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <!-- 고기만두 표-->
+            <table id="table" class="sr_bom meat" border="solid black 1px;">
+                <tr>
+                    <th class="srTh">품목코드</th>
+                    <th class="srTh">품목명</th>
+                    <th class="srTh">수량</th>
+                    <th class="srTh">단위</th>
+                    <th class="srTh">비고</th>
+                    <th class="srTh">수정</th>
+                    <th class="srTh">삭제</th>
+                </tr>
+                <tr>
+                    <td>M001</td>
+                    <td>밀가루</td>
+                    <td>500</td>
+                    <td>g</td>
+                    <td>만두피 재료</td>
+                    <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                    <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                </tr>
+                <tr>
+                    <td>M002</td>
+                    <td>물</td>
+                    <td>200</td>
+                    <td>ml</td>
+                    <td>반죽용</td>
+                    <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                    <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                </tr>
+                <tr>
+                    <td>M003</td>
+                    <td>소금</td>
+                    <td>5</td>
+                    <td>g</td>
+                    <td>반죽의 맛을 위해</td>
+                    <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                    <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                </tr>
+                <tr>
+                    <td>M004</td>
+                    <td>다진 돼지고기</td>
+                    <td>300</td>
+                    <td>g</td>
+                    <td>만두 속 재료</td>
+                    <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                    <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                </tr>
+                <tr>
+                    <td>M005</td>
+                    <td>다진 양파</td>
+                    <td>100</td>
+                    <td>g</td>
+                    <td>만두 속 재료</td>
+                    <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                    <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                </tr>
+                <tr>
+                    <td>M006</td>
+                    <td>대파</td>
+                    <td>30</td>
+                    <td>g</td>
+                    <td>만두 속 재료</td>
+                    <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                    <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                </tr>
+                <tr>
+                    <td>M007</td>
+                    <td>간장</td>
+                    <td>15</td>
+                    <td>ml</td>
+                    <td>만두 속 양념</td>
+                    <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                    <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                </tr>
+                <tr>
+                    <td>M008</td>
+                    <td>참기름</td>
+                    <td>10</td>
+                    <td>ml</td>
+                    <td>만두 속 양념</td>
+                    <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                    <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                </tr>
+                <tr>
+                    <td>M009</td>
+                    <td>후추</td>
+                    <td>2</td>
+                    <td>g</td>
+                    <td>만두 속 양념</td>
+                    <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                    <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                </tr>
+                <tr>
+                    <td>M010</td>
+                    <td>마늘</td>
+                    <td>10</td>
+                    <td>g</td>
+                    <td>만두 속 양념</td>
+                    <td><button class="editButton"><img class="pen" src="/image/edit.png"></button></td>
+                    <td><button class="delButton"><img class="bin" src="/image/delete.png"></button></td>
+                </tr>
+            </table>
+            <div style="display: none;">
+                <form id="srForm">
+                    <input type="text" class="code" placeholder="품목코드">
+                    <input type="text" class="name" placeholder="품목명">
+                    <input type="text" class="amount" placeholder="수량">
+                    <input type="text" class="unit" placeholder="단위">
+                    <input type="text" class="etc" placeholder="비고">
+                </form>
+            </div>
+
+        </div>
     </div>
+    <script src="/js/BOM관리.js">
+    </script>
 </body>
 
 </html>
