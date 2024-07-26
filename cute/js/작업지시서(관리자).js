@@ -15,7 +15,7 @@ mbtn11.addEventListener("click", function(event) {
     } else if (minfo7.length >= 5) {
         alert("이름을 다시 한번 확인해주세요");
     } else {
-        mcontent += '<div class="flex round">';
+        mcontent += '<div class="flex round" style="border: 0">';
         mcontent += '<div>';
         mcontent += `    <blu class="mho">${minfo1}</blu>`;
         mcontent += '</div>';

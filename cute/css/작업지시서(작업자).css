@@ -157,7 +157,11 @@ blue {
 }
 
 #search-button:hover {
-    background-color: #0056b3;
+    background-color: #81b3e9;
+}
+
+#reset-button:hover{
+    background-color: #f38080;
 }
 
 /* 페이지네이션 버튼(mnum)의 위치를 조정 */
@@ -165,7 +169,7 @@ blue {
     display: inline-block;
     position: fixed; /* 위치를 고정 */
     left: 600px;
-    top: 600px; /* 검색창 아래쪽에서 80px 떨어진 위치 */
+    top: 613px; /* 검색창 아래쪽에서 80px 떨어진 위치 */
     background-color: white; /* 배경색 설정 */
     padding: 10px; /* 여백 설정 */
     border-radius: 5px; /* 모서리 둥글게 설정 */
