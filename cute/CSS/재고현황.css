@@ -1,0 +1,79 @@
+﻿.table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 100; /* 테이블 폭 설정 */
+}
+
+.table td, .table th {
+    border: 1px solid black; /* 셀 테두리 설정 */
+    padding: 8px; /* 셀 안쪽 여백 */
+    text-align: center; /* 텍스트 정렬 */
+    position: relative; /* 셀 내부 절대 위치 요소를 위한 상대 위치 설정 */
+}
+
+.table tr:nth-child(even) {
+    background-color: #e6e6e6; /* 짝수 행 배경색 설정 */
+}
+
+.mth{
+    background-color: #e6e6e6;
+}
+
+.imgg {
+    width: 100px;
+    height: 100px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination span {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+    color: black;
+}
+
+.table td input {
+    width: 90%; /* 입력 필드의 폭을 셀 폭의 90%로 설정 */
+    box-sizing: border-box; /* 패딩과 테두리를 포함한 폭 계산 */
+}
+
+.active {
+    font-weight: 600;
+    font-size: 1.2em; /* 원하는 크기로 조정 */
+}
+
+.mtab{
+    display: block;
+    width: 800px;
+    margin-left: 223px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+#item-code,#item-name,#item-image,#item-stock,#item-available{
+    border-radius: 5px;
+    width: 100px;
+    border: 0;
+    padding: 5px;
+    padding-top: 7px;
+    margin-right: 5px;
+}
+
+#add-item{
+    margin-top: 1px;
+    margin-left: 2px;
+    padding: 4px;
+    border:1px solid gray;
+    border-radius: 5px;
+}
+
+.ad1, .ad2{
+    width: 25px;
+}

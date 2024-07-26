@@ -1,0 +1,82 @@
+﻿/* 배경 */
+.sr_grey {
+    width: 1000px;
+    height: 700px;
+}
+
+.sr_mandoo {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    width: 1000px;
+}
+
+#recipeSelect {
+    padding: 5px 20px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+/* 추가버튼 */
+.addBtn {
+    border: 0px;
+    background-color: white;
+}
+
+/* 플러스이미지 */
+.plus {
+    width: 30px;
+}
+
+/* 김치만두, 고기만두 테이블에 적용되는 css */
+.sr_bom {
+    width: 1000px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* 삭제버튼 */
+.delButton {
+    border: 0px;
+    background-color: #ffffff;
+}
+
+/* 휴지통이미지 */
+.bin {
+    width: 30px;
+}
+
+/* 수정버튼 */
+.editButton {
+    border: 0px;
+    background-color: #ffffff;
+}
+
+/* 연필이미지 */
+.pen {
+    width: 30px;
+}
+
+/* 테이블헤드 색상, 크기 설정 */
+.srTh {
+    background-color: #e6e6e6;
+    height: 50px;
+}
+
+.meat {
+    display: none;
+}
+
+.mho:link {
+    color: initial;
+    /* 기본 링크 색상 */
+    text-decoration: none;
+    /* 기본 밑줄 제거 */
+}
+
+.mho:visited {
+    color: initial;
+    /* 방문한 링크 색상 */
+    text-decoration: none;
+    /* 방문한 링크 밑줄 제거 */
+}

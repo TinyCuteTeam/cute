@@ -1,0 +1,66 @@
+﻿        /*div 배경*/
+        .srBack {
+            width: 1000px;
+            height: 700px;
+        }
+
+        /* plus이미지 버튼 오른쪽에 붙이기  */
+        .srPlus {
+            width: 1000px;
+            text-align: right;
+        }
+
+        /* 추가버튼 */
+        .addBtn {
+            border: 0px;
+            background-color: white;
+        }
+
+        /* 플러스이미지 */
+        .plus {
+            width: 30px;
+        }
+
+        /* 삭제버튼 */
+        .delButton {
+            border: 0px;
+            background-color: #ffffff;
+        }
+
+        /* 휴지통이미지 */
+        .bin {
+            width: 30px;
+        }
+
+        /* 수정버튼 */
+        .editButton {
+            border: 0px;
+            background-color: #ffffff;
+        }
+
+        /* 연필이미지 */
+        .pen {
+            width: 30px;
+        }
+
+        /* 품목코드 테이블 */
+        .srTable {
+            width: 1000px;
+            border-collapse: collapse;
+            text-align: center;
+            margin: auto;
+            width: 1000px;
+            height: 500px;
+        }
+
+        /* 품목코드표 제일 위 메뉴 */
+        .srTh {
+            background-color: #e6e6e6;
+            height: 50px;
+        }
+
+        /* 재료이미지 */
+        .ingre {
+            width: 50px;
+            height: 50px;
+        }

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생산계획</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/CSS/생산계획.css">
+    <style>
+        /* 추가적인 스타일링 */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+        }
+
+        .close-popup {
+            cursor: pointer;
+            float: right;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 메인 -->
+    <div class="category">
+        <!-- 메뉴 아이콘 -->
+        <div class="menu-icon">
+            <img class="menu-icon" src="/image/menu.png">
+        </div>
+
+        <!-- 로고 아이콘 -->
+        <div class="category-item">
+            <a href="/index.html" class="category-link"><img class="logo-icon" src="/image/logo.png"></a>
+        </div>
+
+        <!-- 카테고리 -->
+        <div class="category-item">
+            <a href="/HTML/품목코드조회.html" class="category-link">기준관리</a>
+            <div class="_category">
+                <a href="/HTML/품목코드조회.html" class="category-link">품목 코드 조회</a><br>
+                <a href="/HTML/BOM.html" class="category-link">BOM(레시피관리)</a><br>
+                <a href="/HTML/거래처관리.html" class="category-link">거래처 관리</a><br>
+            </div>
+        </div>
+        <div class="category-item">
+            <a href="/HTML/발주확인.html" class="category-link title">생산계획</a>
+            <div class="_category">
+                <a href="/HTML/발주확인.html" class="category-link">발주확인</a> <br>
+                <a href="/HTML/작업지시서(관리자용).html" class="category-link">작업지시서 작성</a> <br>
+                <a href="/HTML/작업지시서(작업자용).html" class="category-link">작업지시서 확인</a> <br>
+                <a href="/HTML/작업지시서조회.html" class="category-link title">작업지시서 조회</a> <br>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <a href="/HTML/재고현황.html" class="category-link">재고관리</a>
+            <div class="_category">
+                <a href="/HTML/재고현황.html" class="category-link">재고현황</a>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <a href="/HTML/생산현황.html" class="category-link">공정관리</a>
+            <div class="_category">
+                <a href="/HTML/생산현황.html" class="category-link">생산현황</a>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <a href="/HTML/품질관리.html" class="category-link">품질관리</a>
+            <div class="_category">
+                <a href="/HTML/품질관리.html" class="category-link">품질관리</a><br>
+                <a href="/HTML/에러코드.html" class="category-link">에러코드</a><br>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <a href="/HTML/실적마감.html" class="category-link">실적 및 출하</a>
+            <div class="_category">
+                <a href="/HTML/실적마감.html" class="category-link">실적마감</a><br>
+                <a href="/HTML/출하확인.html" class="category-link">출하확인</a><br>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <a href="/HTML/마이페이지.html"><img class="mypage-icon" src="/image/mypage.png"></a>
+
+            <div class="_category">
+                <a href="/HTML/마이페이지.html" class="category-link">마이페이지</a> <br>
+                <a href="/HTML/계정관리.html" class="category-link">계정관리</a><br>
+                <a href="/HTML/사내게시판.html "class="category-link">사내게시판</a><br>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 사이드바 -->
+    <div class="sidebar">
+        <ul id="sidebar-content">
+            <li><a href="/HTML/발주확인.html" class="category-link">발주확인</a></li>
+            <li><a href="/HTML/작업지시서(관리자용).html" class="category-link">작업지시서 작성</a></li>
+            <li><a href="/HTML/작업지시서(작업자용).html" class="category-link">작업지시서 확인</a></li>
+            <li><a href="/HTML/작업지시서조회.html" class="category-link title">작업지시서 조회</a></li>
+        </ul>
+    </div>
+
+    <!-- 내용페이지 -->
+    <div class="content">
+        <!-- 검색 입력 필드 및 버튼 추가 -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="검색어를 입력하세요...">
+            <button id="search-button">검색</button>
+            <button id="cancel-button">취소</button>
+        </div>
+
+        <!-- 생산계획 버튼들 -->
+         <div class="wrap">
+        <div class="action-buttons">
+            <button id="add-button">등록</button>
+            <button id="edit-button">수정</button>
+            <button id="delete-button">삭제</button>
+        </div>
+
+        <!-- 데이터 테이블 -->
+        <div class="main">
+            <!-- 각 내용별 제목 -->
+            <div class="flex mfont">
+                <div><input type="checkbox" id="select-all"> 선택</div>
+                <div>계획번호</div>
+                <div>품목명</div>
+                <div>계획일자</div>
+                <div>생산량</div>
+                <div>진행상태</div>
+            </div>
+
+            <!-- 데이터 항목이 동적으로 추가될 부분 -->
+            <div id="data-container" class="data-container">
+                <!-- 기존 데이터 항목 -->
+                <div class="flex round">
+                    <div><input type="checkbox" class="item-checkbox"></div>
+                    <div>
+                        <a class="mho" href="/html/생산계획상세.html">2024-001</a>
+                    </div>
+                    <div>비비고/왕교자</div>
+                    <div>2024.07.01</div>
+                    <div>2000 BOX</div>
+                    <div>
+                        <color class="green">진행중</color>
+                    </div>
+                </div>
+                <!-- 추가 데이터들... -->
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 팝업창 -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close-popup">&times;</span>
+            <h2>생산계획 등록</h2>
+            <form id="registration-form">
+                <label for="plan-number">계획번호:</label>
+                <input type="text" id="plan-number" name="plan-number" required><br><br>
+                <label for="item-name">품목명:</label>
+                <input type="text" id="item-name" name="item-name" required><br><br>
+                <label for="plan-date">계획일자:</label>
+                <input type="date" id="plan-date" name="plan-date" required><br><br>
+                <label for="production-quantity">생산량:</label>
+                <input type="text" id="production-quantity" name="production-quantity" required><br><br>
+                <label for="status">진행상태:</label>
+                <select id="status" name="status" required>
+                    <option value="진행중">진행중</option>
+                    <option value="예정">예정</option>
+                    <option value="완료">완료</option>
+                </select><br><br>
+                <button type="submit">등록</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addButton = document.getElementById('add-button');
+            const editButton = document.getElementById('edit-button');
+            const deleteButton = document.getElementById('delete-button');
+            const searchButton = document.getElementById('search-button');
+            const cancelButton = document.getElementById('cancel-button');
+            const popup = document.getElementById('popup');
+            const closePopup = document.getElementById('close-popup');
+            const registrationForm = document.getElementById('registration-form');
+            const selectAllCheckbox = document.getElementById('select-all');
+            const itemCheckboxes = document.querySelectorAll('.item-checkbox');
+            const dataContainer = document.getElementById('data-container');
+
+            // 팝업창 열기
+            addButton.addEventListener('click', function () {
+                popup.style.display = 'flex';
+            });
+
+            // 팝업창 닫기
+            closePopup.addEventListener('click', function () {
+                popup.style.display = 'none';
+            });
+
+            // 팝업창 등록 버튼
+            registrationForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                
+                // 입력 값 가져오기
+                const planNumber = document.getElementById('plan-number').value;
+                const itemName = document.getElementById('item-name').value;
+                const planDate = document.getElementById('plan-date').value;
+                const productionQuantity = document.getElementById('production-quantity').value;
+                const status = document.getElementById('status').value;
+
+                // 새로운 데이터 항목 생성
+                const newItem = document.createElement('div');
+                newItem.className = 'flex round';
+                newItem.innerHTML = `
+                    <div><input type="checkbox" class="item-checkbox"></div>
+                    <div><a class="mho" href="/html/생산계획상세.html">${planNumber}</a></div>
+                    <div>${itemName}</div>
+                    <div>${planDate}</div>
+                    <div>${productionQuantity}</div>
+                    <div><color class="green">${status}</color></div>
+                `;
+                
+                // 데이터 컨테이너에 추가
+                dataContainer.appendChild(newItem);
+
+                alert('생산계획이 등록되었습니다.');
+                popup.style.display = 'none';
+
+                // 폼 초기화
+                registrationForm.reset();
+            });
+
+            // 전체 선택 체크박스
+            selectAllCheckbox.addEventListener('change', function () {
+                itemCheckboxes.forEach(checkbox => {
+                    checkbox.checked = selectAllCheckbox.checked;
+                });
+            });
+
+            // 수정 버튼
+            editButton.addEventListener('click', function () {
+                let selectedItems = Array.from(itemCheckboxes).filter(checkbox => checkbox.checked);
+                if (selectedItems.length === 1) {
+                    alert('수정 되었습니다.');
+                    // 여기에 실제 수정 기능을 추가해야 합니다.
+                } else if (selectedItems.length === 0) {
+                    alert('수정할 항목을 선택하세요.');
+                } else {
+                    alert('한 번에 하나의 항목만 수정할 수 있습니다.');
+                }
+            });
+
+            // 삭제 버튼
+            deleteButton.addEventListener('click', function () {
+                let selectedItems = Array.from(itemCheckboxes).filter(checkbox => checkbox.checked);
+                if (selectedItems.length > 0) {
+                    if (confirm('선택한 항목을 삭제하시겠습니까?')) {
+                        alert('삭제 되었습니다.');
+                        // 여기에 실제 삭제 기능을 추가해야 합니다.
+                        selectedItems.forEach(checkbox => {
+                            checkbox.closest('.round').remove();
+                        });
+                    }
+                } else {
+                    alert('삭제할 항목을 선택하세요.');
+                }
+            });
+
+            // 검색 버튼
+            searchButton.addEventListener('click', function () {
+                const searchQuery = document.getElementById('search-input').value.toLowerCase();
+                document.querySelectorAll('.flex.round').forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    row.style.display = text.includes(searchQuery) ? 'flex' : 'none';
+                });
+            });
+
+            // 검색 취소 버튼
+            cancelButton.addEventListener('click', function () {
+                document.getElementById('search-input').value = '';
+                document.querySelectorAll('.flex.round').forEach(row => {
+                    row.style.display = 'flex';
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.doughnut {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+}
+
+.linec {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+.select {
+    position: absolute;
+    top: 22%;
+    left: 20%;
+}
+
+._select {
+
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+.chart-container {
+    display: inline-block;
+    width: 500px;
+    height: 400px;
+    margin-top: 100px;
+    margin-right: 100px;
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: 100%;
+}
