@@ -99,98 +99,103 @@
 
     <!-- 내용페이지  -->
     <div class="content">
-        <!-- <div class="sr_grey"> -->
-            <h1 class="sr_grey" >레시피 관리 - 제품추가</h1>
-
-            <!--sr_mandoo: 레시피선택, 1개기준, 플러스버튼 -->
-            <div class="sr_mandoo">
-                <!-- 되돌아가기 이미지 -->
-                <img class="imgstyle back" src="/image/뒤로가기.png" title="뒤로가기">
-                <!-- save이미지 -->
-                <img class="imgstyle save" src="/image/save.webp" title="저장">
-            </div>
-
-            <br>
-            <!-- 제품정보 작성 테이블 -->
-            <table class="productInfo" border="solid black 1px;">
-                <tr>
-                    <th class="srTh">제품코드</th>
-                    <th class="srTh">제품명</th>
-                </tr>
-                <!-- 여기가 내용 작성하는 곳이 될 예정 -->
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                </tr>
-            </table>
-
-            <img src="/image/plus.png" class="ingrebutt mho imgstyle" onclick="addIngredient()">
-            <br>
-            <!-- 재료작성 테이블 -->
-            <table class="ingreInfo" border="solid black 1px;">
-                <tr>
-                    <th class="srTh">품목코드</th>
-                    <th class="srTh">품목명</th>
-                    <th class="srTh">수량</th>
-                    <th class="srTh">단위</th>
-                    <th class="srTh">비고</th>
-                    <th class="srTh">작업</th>
-                </tr>
-                <!-- 여기가 내용 작성하는 곳이 될 예정 -->
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><img onclick="deleteRow(this)" src="/image/delete.png" class="imgstyle" title="삭제"></td>
-                        
-                </tr>
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><img onclick="deleteRow(this)" src="/image/delete.png" class="imgstyle" title="삭제"></td>
-                </tr>
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><img onclick="deleteRow(this)" src="/image/delete.png" class="imgstyle" title="삭제"></td>
-                </tr>
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><img onclick="deleteRow(this)" src="/image/delete.png" class="imgstyle" title="삭제"></td>
-                </tr>
-                <tr>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><img onclick="deleteRow(this)" src="/image/delete.png" class="imgstyle" title="삭제"></td>
-                </tr>
-            </table>
-
-            <div style="display: none;">
-                <form id="srForm">
-                    <input type="text" class="code" placeholder="품목코드">
-                    <input type="text" class="name" placeholder="품목명">
-                    <input type="text" class="amount" placeholder="수량">
-                    <input type="text" class="unit" placeholder="단위">
-                    <input type="text" class="etc" placeholder="비고">
-                </form>
-            </div>
-
+        <div class="srBack">
+            <h1>레시피 관리 - 제품추가</h1>
         </div>
+
+        <!--sr_mandoo: 레시피선택, 1개기준, 플러스버튼 -->
+        <div class="sr_mandoo">
+            <!-- 되돌아가기 이미지 -->
+            <img class="imgstyle back" src="/image/뒤로가기.png" title="뒤로가기">
+            <!-- save이미지 -->
+            <img class="imgstyle save" src="/image/save.webp" title="저장">
+        </div>
+
+        <br>
+        <!-- 제품정보 작성 테이블 -->
+        <table class="productInfo infoTable" border="solid black 1px;">
+            <tr>
+                <th class="srTh">제품코드</th>
+                <th class="srTh">제품명</th>
+            </tr>
+            <!-- 여기가 내용 작성하는 곳이 될 예정 -->
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+
+        <!-- 플러스이미지 -->
+         <div class="toRight">
+            <div></div>
+            <img src="/image/plus.png" class="ingrebutt mho imgstyle" title="한줄추가" onclick="addIngredient()">
+        </div>
+      
+        <!-- 재료정보 작성 테이블 -->
+        <table class="ingreInfo infoTable" border="solid black 1px;">
+            <tr>
+                <th class="srTh">품목코드</th>
+                <th class="srTh">품목명</th>
+                <th class="srTh">수량</th>
+                <th class="srTh">단위</th>
+                <th class="srTh">비고</th>
+                <th class="srTh">작업</th>
+            </tr>
+            <!-- 여기가 내용 작성하는 곳이 될 예정 -->
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><img onclick="deleteRow(this)" src="/image/delete.png" class="imgstyle" title="삭제"></td>
+
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><img onclick="deleteRow(this)" src="/image/delete.png" class="imgstyle" title="삭제"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><img onclick="deleteRow(this)" src="/image/delete.png" class="imgstyle" title="삭제"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><img onclick="deleteRow(this)" src="/image/delete.png" class="imgstyle" title="삭제"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><img onclick="deleteRow(this)" src="/image/delete.png" class="imgstyle" title="삭제"></td>
+            </tr>
+        </table>
+
+        <div style="display: none;">
+            <form id="srForm">
+                <input type="text" class="code" placeholder="품목코드">
+                <input type="text" class="name" placeholder="품목명">
+                <input type="text" class="amount" placeholder="수량">
+                <input type="text" class="unit" placeholder="단위">
+                <input type="text" class="etc" placeholder="비고">
+            </form>
+        </div>
+
+    </div>
     </div>
 
     <script src="/js/BOM관리_제품추가.js">
