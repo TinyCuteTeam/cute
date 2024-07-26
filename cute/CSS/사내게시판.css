@@ -17,7 +17,8 @@ h1 {
 
 button {
     padding: 10px;
-    background-color: #E6e6e6;
+    background-color: #0085FF;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -26,7 +27,8 @@ button {
 }
 
 button:hover {
-    background-color: #0085FF;
+    background-color: #0056b3;
+    color: white;
 }
 
 table {

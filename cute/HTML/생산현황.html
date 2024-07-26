@@ -61,8 +61,7 @@
         <div class="category-item">
             <a href="/HTML/품질관리.html" class="category-link">품질관리</a>
             <div class="_category">
-                <a href="/HTML/품질관리.html" class="category-link">품질관리</a><br>
-                <a href="/HTML/에러코드.html" class="category-link">에러코드</a><br>
+                <a href="/HTML/불량률파악보고서.html" class="category-link">불량률파악보고서</a><br>
             </div>
         </div>
 
@@ -96,27 +95,31 @@
     </div>
 
     <!-- 내용페이지  -->
-    <div class="content">
+    <div class="progress-content">
         <div class="progress-home">
             <div class="progress-mandoo">
                 <select class="progress-pick" id="progress-select">
                     <option value="all">전체</option>
-                    <option value="b1">000001/비비고 왕교자</option>
-                    <option value="b2">000002/비비고 새우만두</option>
-                    <option value="b3">000003/비비고 군만두</option>
+                    <option value="b1">작업지시번호1</option>
+                    <option value="b2">작업지시번호2</option>
+                    <option value="b3">작업지시번호3</option>
                 </select>
             </div>
             <!-- 첫 번째 진행 바 -->
             <div class="probar" id="b1">
                 <div class="progress-explain">
                     <span>1차 생산</span>
+                    <span>1차 검수</span>
                     <span>2차 생산</span>
+                    <span>2차 검수</span>
                     <span>포장</span>
-                    <span>검수</span>
+                    <span>3차 검수</span>
                     <span>출하</span>
                 </div>
                 <div class="progress-container">
                     <div class="progress-line-container">
+                        <div class="progress-line"></div>
+                        <div class="progress-line"></div>
                         <div class="progress-line"></div>
                         <div class="progress-line"></div>
                         <div class="progress-line"></div>
@@ -131,18 +134,44 @@
                     <span>생산 수량 | 20 BOX</span><br>
                     <span>불량 수량 | 1 BOX</span>
                 </div>
+                <div class="quality-explain">
+                    <span>1차 검수</span>
+                    <span>2차 검수</span>
+                    <span>3차 검수</span>
+                    <span>검수 완료</span>
+                </div>
+                <div class="quality-container">
+                    <div class="quality-line-container">
+                        <div class="quality-line"></div>
+                        <div class="quality-line"></div>
+                        <div class="quality-line"></div>
+                        <div class="quality-line"></div>
+                    </div>
+                    <div class="quality-bar"></div>
+                </div>
+                <div class="qualcount">
+                    <img src="/image/갱신.png" class="pro-restart">
+                    <br>
+                    <span>1차 검수 | 적격</span><br>
+                    <span>2차 검수 | 적격</span><br>
+                    <span>3차 검수 | 부적격</span>
+                </div>
             </div>
             <!-- 두 번째 진행 바 -->
             <div class="probar" id="b2" style="display: none;">
                 <div class="progress-explain">
                     <span>1차 생산</span>
+                    <span>1차 검수</span>
                     <span>2차 생산</span>
+                    <span>2차 검수</span>
                     <span>포장</span>
-                    <span>검수</span>
+                    <span>3차 검수</span>
                     <span>출하</span>
                 </div>
                 <div class="progress-container">
                     <div class="progress-line-container">
+                        <div class="progress-line"></div>
+                        <div class="progress-line"></div>
                         <div class="progress-line"></div>
                         <div class="progress-line"></div>
                         <div class="progress-line"></div>
@@ -157,18 +186,44 @@
                     <span>생산 수량 | 30 BOX</span><br>
                     <span>불량 수량 | 3 BOX</span>
                 </div>
+                <div class="quality-explain">
+                    <span>1차 검수</span>
+                    <span>2차 검수</span>
+                    <span>3차 검수</span>
+                    <span>검수 완료</span>
+                </div>
+                <div class="quality-container">
+                    <div class="quality-line-container">
+                        <div class="quality-line"></div>
+                        <div class="quality-line"></div>
+                        <div class="quality-line"></div>
+                        <div class="quality-line"></div>
+                    </div>
+                    <div class="quality-bar"></div>
+                </div>
+                <div class="qualcount">
+                    <img src="/image/갱신.png" class="pro-restart">
+                    <br>
+                    <span>1차 검수 | 적격</span><br>
+                    <span>2차 검수 | 적격</span><br>
+                    <span>3차 검수 | 부적격</span>
+                </div>
             </div>
             <!-- 세 번째 진행 바 -->
             <div class="probar" id="b3" style="display: none;">
                 <div class="progress-explain">
                     <span>1차 생산</span>
+                    <span>1차 검수</span>
                     <span>2차 생산</span>
+                    <span>2차 검수</span>
                     <span>포장</span>
-                    <span>검수</span>
+                    <span>3차 검수</span>
                     <span>출하</span>
                 </div>
                 <div class="progress-container">
                     <div class="progress-line-container">
+                        <div class="progress-line"></div>
+                        <div class="progress-line"></div>
                         <div class="progress-line"></div>
                         <div class="progress-line"></div>
                         <div class="progress-line"></div>
@@ -183,6 +238,28 @@
                     <span>생산 수량 | 5 BOX</span><br>
                     <span>불량 수량 | 0 BOX</span>
                 </div>
+                <div class="quality-explain">
+                    <span>1차 검수</span>
+                    <span>2차 검수</span>
+                    <span>3차 검수</span>
+                    <span>검수 완료</span>
+                </div>
+                <div class="quality-container">
+                    <div class="quality-line-container">
+                        <div class="quality-line"></div>
+                        <div class="quality-line"></div>
+                        <div class="quality-line"></div>
+                        <div class="quality-line"></div>
+                    </div>
+                    <div class="quality-bar"></div>
+                </div>
+                <div class="qualcount">
+                    <img src="/image/갱신.png" class="pro-restart">
+                    <br>
+                    <span>1차 검수 | 적격</span><br>
+                    <span>2차 검수 | 적격</span><br>
+                    <span>3차 검수 | 부적격</span>
+                </div>
             </div>
         </div>
         <script src="/js/생산현황.js">
@@ -190,5 +267,4 @@
         </script>
     </div>
 </body>
-
 </html>
