@@ -7,12 +7,12 @@
             });
         });
 
-        // 기존의 수정 버튼 및 저장 버튼 이벤트 설정
-        document.querySelectorAll(".editButton, .saveButton").forEach(function (button) {
+        // 기존의 수정 버튼 이벤트 설정
+        document.querySelectorAll(".editButton").forEach(function (button) {
             button.addEventListener('click', function (event) {
                 let tableRow = event.currentTarget.parentNode.parentNode;
                 let cells = tableRow.querySelectorAll('td');
-                let isEditing = button.classList.contains('editing') || button.classList.contains('saveButton');
+                let isEditing = button.classList.contains('editing');
 
                 if (isEditing) {
                     saveRow(event);
@@ -44,18 +44,9 @@
         let tableRow = button.parentNode.parentNode;
         let cells = tableRow.querySelectorAll('td');
 
-        // 디버깅: cells 내용을 콘솔에 출력
-        console.log(cells);
+        let isEditing = button.src.includes('save.webp');
 
-        // 셀의 개수를 확인하여 에러 예방
-        if (!cells || cells.length < 5) {
-            console.error('셀의 개수가 부족합니다.');
-            return;
-        }
-
-        let isSaving = button.src.includes('save.webp');
-
-        if (isSaving) {
+        if (isEditing) {
             let codeInput = cells[0].querySelector('input');
             let nameInput = cells[1].querySelector('input');
             let imageInput = cells[2].querySelector('.item-image');
@@ -65,7 +56,6 @@
                 let name = nameInput.value.trim();
                 let imageUrl = '';
 
-                // 파일이 선택되었는지 확인
                 if (imageInput && imageInput.files && imageInput.files[0]) {
                     const file = imageInput.files[0];
                     if (file) {
@@ -75,7 +65,6 @@
                         cells[2].innerHTML = '이미지 없음';
                     }
                 } else {
-                    // 파일이 선택되지 않았을 때 처리
                     let existingImg = cells[2].querySelector('img');
                     if (existingImg) {
                         imageUrl = existingImg.src;
@@ -86,32 +75,45 @@
                 cells[0].textContent = code;
                 cells[1].textContent = name;
                 button.src = '/image/edit.png';
-                button.classList.remove('editing');
-                button.classList.add('editButton'); // 버튼 클래스를 수정
-            } else {
-                console.error('품목코드 또는 품목명 입력 필드가 없습니다.');
             }
+            button.classList.remove('editing');
         }
     }
 
     document.querySelector('.addBtn').addEventListener('click', function () {
+        let codeInput = document.querySelector('.code');
+        let nameInput = document.querySelector('.name');
+        let imageInput = document.querySelector('.image');
+
+        if (!codeInput || !nameInput) {
+            console.error('품목코드와 품목명 입력 필드가 없습니다.');
+            return;
+        }
+
+        let code = codeInput.value.trim();
+        let name = nameInput.value.trim();
+        let imageUrl = '';
+
+        if (imageInput && imageInput.files && imageInput.files[0]) {
+            const file = imageInput.files[0];
+            imageUrl = URL.createObjectURL(file);
+        }
+
         let table = document.querySelector('#table');
         if (!table) {
             console.error('테이블이 존재하지 않습니다.');
             return;
         }
 
-        // 새 행을 테이블에 추가
         let newRow = table.insertRow();
 
-        newRow.insertCell(0).innerHTML = `<input type="text" class="item-code" placeholder="품목코드">`;
-        newRow.insertCell(1).innerHTML = `<input type="text" class="item-name" placeholder="품목명">`;
+        newRow.insertCell(0).innerHTML = `<input type="text" class="item-code" placeholder="품목코드" value="${code}">`;
+        newRow.insertCell(1).innerHTML = `<input type="text" class="item-name" placeholder="품목명" value="${name}">`;
         newRow.insertCell(2).innerHTML = `<input type="file" class="item-image" accept="image/*">
-                                           <img style="display:block; max-width:100px; max-height:100px;">`;
-        newRow.insertCell(3).innerHTML = `<img class="pen saveButton" src="/image/save.webp" title="저장">`;
+                                           <img src="${imageUrl}" style="display:block; max-width:100px; max-height:100px;">`;
+        newRow.insertCell(3).innerHTML = `<img class="pen editButton" src="/image/edit.png" title="수정/저장">`;
         newRow.insertCell(4).innerHTML = `<img class="bin delButton" src="/image/delete.png" title="삭제">`;
 
-        // 이벤트 리스너 설정
         setupInitialEvents();
 
         function previewImage(event) {
@@ -129,12 +131,38 @@
         }
 
         newRow.querySelector('.item-image').addEventListener('change', previewImage);
-        newRow.querySelector('.saveButton').addEventListener('click', saveRow);
+        newRow.querySelector('.editButton').addEventListener('click', saveRow);
         newRow.querySelector('.delButton').addEventListener('click', function (event) {
             event.currentTarget.parentNode.parentNode.remove();
         });
     });
 
-    // 초기 이벤트 설정
+    function searchTable() {
+        let input = document.getElementById('search-input').value.toLowerCase();
+        let table = document.getElementById('table');
+        let rows = table.getElementsByTagName('tr');
+        
+        for (let i = 1; i < rows.length; i++) {
+            let cells = rows[i].getElementsByTagName('td');
+            let showRow = false;
+            for (let j = 0; j < cells.length - 2; j++) {
+                let cellText = cells[j].textContent.toLowerCase();
+                if (cellText.includes(input)) {
+                    showRow = true;
+                    break;
+                }
+            }
+            rows[i].style.display = showRow ? '' : 'none';
+        }
+    }
+
+    function clearSearch() {
+        document.getElementById('search-input').value = '';
+        searchTable(); // Reset table display
+    }
+
+    document.getElementById('search-button').addEventListener('click', searchTable);
+    document.getElementById('reset-button').addEventListener('click', clearSearch);
+
     setupInitialEvents();
 });

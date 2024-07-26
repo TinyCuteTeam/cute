@@ -24,19 +24,37 @@
             text-align: center;
             display: inline-block;
         }
-        /* 검색창 */
-        .sr_search_text {
-            border: 1px solid black;
-            border-radius: 30px;
-            height: 40px;
-            width: 400px;
-            position:relative;
-            top:-10px;
+     
+        .search-container {
+            position: fixed; 
         }
-        /* 검색버튼 이미지 */
-        .sr_searchbar {
-            width: 40px;  
+        
+        #search-input {
+            width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        
+        #search-button, #reset-button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #e6e6e6;
+            color: black;
+            font-size: 16px;
             cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        #search-button:hover {
+            background-color: #81b3e9;
+        }
+        
+        #reset-button:hover{
+            background-color: #f38080;
         }
 
         /* plus이미지 버튼 오른쪽에 붙이기  */
