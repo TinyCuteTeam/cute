@@ -84,3 +84,20 @@
             height: 50px;
         }
 
+        /* 방금 추가 */
+        #image-preview {
+            display: none;
+            margin-top: 20px;
+        }
+        
+        #preview-img {
+            max-width: 200px;
+            max-height: 200px;
+            /* border: 1px solid #ddd;
+            padding: 5px; */
+        }
+
+        input[type="file"] {
+            display: inline-block;
+        }
+
