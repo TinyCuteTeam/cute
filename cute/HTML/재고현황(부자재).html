@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="kor">
 
 <head>
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandoo</title>
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/CSS/작업지시서(관리자).css">
+    <link rel="stylesheet" href="/CSS/재고현황.css">
 </head>
 
 <body>
@@ -34,19 +34,19 @@
             </div>
         </div>
         <div class="category-item">
-            <a href="/HTML/발주확인.html" class="category-link title">생산계획</a>
+            <a href="/HTML/발주확인.html" class="category-link">생산계획</a>
             <div class="_category">
                 <a href="/HTML/발주확인.html" class="category-link">발주확인</a> <br>
-                <a href="/HTML/작업지시서(관리자용).html" class="category-link title">작업지시서 작성</a> <br>
+                <a href="/HTML/작업지시서(관리자용).html" class="category-link">작업지시서 작성</a> <br>
                 <a href="/HTML/작업지시서(작업자용).html" class="category-link">작업지시서 확인</a> <br>
                 <a href="/HTML/작업지시서조회.html" class="category-link">작업지시서 조회</a> <br>
             </div>
         </div>
 
         <div class="category-item">
-            <a href="/HTML/재고현황.html" class="category-link">재고관리</a>
+            <a href="/HTML/재고현황.html" class="category-link title">재고관리</a>
             <div class="_category">
-                <a href="/HTML/재고현황.html" class="category-link">재고현황</a>
+                <a href="/HTML/재고현황.html" class="category-link title">재고현황</a>
             </div>
         </div>
 
@@ -81,62 +81,59 @@
                 <a href="/HTML/계정관리.html" class="category-link">계정관리</a><br>
                 <a href="/HTML/사내게시판.html "class="category-link">사내게시판</a><br>
             </div>
-
         </div>
-
     </div>
 
     <!-- 사이드바 -->
     <div class="sidebar">
         <ul id="sidebar-content">
-            <li><a href="/HTML/발주확인.html" class="category-link">발주확인</a></li>
-            <li><a href="/HTML/작업지시서(관리자용).html" class="category-link title">작업지시서 작성</a></li>
-            <li><a href="/HTML/작업지시서(작업자용).html" class="category-link">작업지시서 확인</a></li>
-            <li><a href="/HTML/작업지시서조회.html" class="category-link">작업지시서 조회</a></li>
+            <li><a href="/HTML/재고현황.html" class="category-link">재고현황</a></li>
+            <ul>
+                <li><a href="/HTML/재고현황(원자재).html" class="category-link">원자재</a></li>
+                <li><a href="/HTML/재고현황(부자재).html" class="category-link title">부자재</a></li>
+            </ul>
         </ul>
     </div>
 
     <!-- 내용페이지  -->
     <div class="content">
-        <div class="flex mfont">
-            <div>작업지시NO.</div>
-            <div>작성일자</div>
-            <div>납기일자</div>
-            <div>품목명</div>
-            <div>수량(BOX)</div>
-            <div>작성자</div>
-            <div>첨부파일</div>
+        <div class="rightnow"><h1>재고 현황</h1></div>
+
+        <div class=mtab style="text-align: center;">
+            <input type="text" id="item-code" placeholder="품목코드">
+            <input type="text" id="item-name" placeholder="품목명">
+            <input type="text" id="item-image" placeholder="이미지코드">
+            <input type="number" id="item-stock" placeholder="재고수량">
+            <input type="number" id="item-available" placeholder="가용수량">
+            <button id="add-item">등록</button>
         </div>
 
-        <!-- 각 제목별 추가할 내용을 직접 추가할 수 있도록 -->
-        <!-- type=text로 설정 -->
-        <!-- 나중에 .value로 값을 받기 위해 -->
-        <div class="flex round">
-            <div>
-                <input type="text" id="minfo1">
-            </div>
-            <div><input type="text" id="minfo3"></div>
-            <div><input type="text" id="minfo4"></div>
-            <div><input type="text" id="minfo5"></div>
-            <div><input type="text" id="minfo6"></div>
-            <div><input type="text" id="minfo7"></div>
-            <div><img class="add" src="/image/첨부파일이모티콘.png"></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="mth">품목코드</th>
+                    <th class="mth">품목명</th>
+                    <th class="mth">이미지</th>
+                    <th class="mth">재고수량</th>
+                    <th class="mth">가용수량</th>
+                    <th class="mth">재고위치</th>
+                    <th class="mth">수정</th>
+                    <th class="mth">삭제</th>
+                </tr>
+            </thead>
+            <tbody id="product-table-body">
+                <!-- JavaScript로 데이터가 추가될 부분 -->
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <!-- 페이지 버튼이 여기에 추가될 것입니다 -->
         </div>
+    </div>
 
-        <!-- 직접 추가한 내용이 들어갈 자리 -->
-        <div id="msg"></div>
+    <script src="/js/재고현황(부자재).js">
 
-        <!-- 작성한 내용을 들어갈 자리에 등록할 수 있도록 하는 등록버튼 -->
-        <mleftt>
-            <button class="mbtn11">등록</button>
-        </mleftt>
-
-        <!-- 첨부파일(작업지시서)을 눌렀을때 보여질 자리 -->
-        <div class="mdiv"></div>
-
-        <script src="/js/작업지시서(관리자).js">
-
-        </script>
+    </script>
 </body>
 
 </html>

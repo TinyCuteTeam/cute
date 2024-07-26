@@ -70,26 +70,88 @@ let isOkay = false;
 // .value값을 다르게 줘서 display = none으로 가리고
 // .value별로 block과 none을 줘서 바뀌도록 진행
 document.querySelector('#mandoo-cate').addEventListener('change', function () {
+    let m_all = document.querySelector('.m_all');
     let big = document.querySelector('.big');
     let sae = document.querySelector('.sae');
     let gun = document.querySelector('.gun');
 
+    m_all.style.display = 'none';
     big.style.display = 'none';
     sae.style.display = 'none';
     sae.style.display = 'none';
 
     // 선택된 값에 따라 해당 div 보이기
-    if (this.value === 'big') {
+    
+    if (this.value === 'm_all') {
+        m_all.style.display = 'block';
+        big.style.display = 'none';
+        sae.style.display = 'none';
+        gun.style.display = 'none';
+    }else if (this.value === 'big') {
+        m_all.style.display = 'none';
         big.style.display = 'block';
-        sae.style.display = 'none'
-        gun.style.display = 'none'
-    } else if (this.value === 'sae') {
+        sae.style.display = 'none';
+        gun.style.display = 'none';
+    }else if (this.value === 'sae') {
+        m_all.style.display = 'none';
         big.style.display = 'none';
         sae.style.display = 'block';
-        gun.style.display = 'none'
+        gun.style.display = 'none';
     } else if (this.value === 'gun') {
+        m_all.style.display = 'none';
         big.style.display = 'none';
         sae.style.display = 'none';
         gun.style.display = 'block';
     }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const itemsPerPage = 2;
+    const mandooCate = document.getElementById('mandoo-cate');
+    const paginationDiv = document.querySelector('.m_pagination');
+    
+    // 카테고리에 따라 아이템 가져오기
+    function getItems(category) {
+        if (category === 'm_all') {
+            return document.querySelectorAll('.m_all .flex.round');
+        } else {
+            return document.querySelectorAll(`.${category} .flex.round`);
+        }
+    }
+
+    // 페이지 번호 버튼 생성
+    function createPaginationButtons(items) {
+        paginationDiv.innerHTML = '';
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement('button');
+            pageButton.textContent = i;
+            pageButton.addEventListener('click', () => showPage(i, items));
+            paginationDiv.appendChild(pageButton);
+        }
+    }
+
+    // 특정 페이지의 항목만 표시하는 함수
+    function showPage(page, items) {
+        items.forEach((item, index) => {
+            item.style.display = 'none';
+            if (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) {
+                item.style.display = 'flex';
+            }
+        });
+    }
+
+    // 초기 표시
+    let currentCategory = mandooCate.value;
+    let currentItems = getItems(currentCategory);
+    createPaginationButtons(currentItems);
+    showPage(1, currentItems);
+
+    // 카테고리 변경 시 처리
+    mandooCate.addEventListener('change', () => {
+        currentCategory = mandooCate.value;
+        currentItems = getItems(currentCategory);
+        createPaginationButtons(currentItems);
+        showPage(1, currentItems);
+    });
 });

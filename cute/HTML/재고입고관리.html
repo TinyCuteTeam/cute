@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .jaego{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .jaego tr td{
+            padding: 7px;
+            text-align: center;
+        }
+
+        .jaegoAll, .wait, .success, .return, .ibgo, .m_select, .m_d{
+            padding: 5px 15px;
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>입고관리</h2>
+    <h3>입고신청목록</h3>
+    <div style="display: inline-block;">
+        <input class="jaegoAll" type="button" value="전체">
+        <input class="wait" type="button" value="결재대기">
+        <input class="success" type="button" value="결재완료">
+        <input class="return" type="button" value="반려">
+    </div>
+    <div style="display: inline-block;">
+        <input class="ibgo" type="button" value="입고신청">
+        <input class="m_select" type="button" value="결재대기">
+        <input class="m_d" type="button" value="결재완료">
+    </div>
+    <table class="jaego" border="1px solid black">
+        <tr>
+            <td colspan="2"></td>
+            <td>거래번호</td>
+            <td>거래처</td>
+            <td>상태</td>
+            <td>입고일</td>
+            <td>총금액</td>
+            <td>신청일</td>
+            <td>신청자</td>
+            <td>수정일</td>
+            <td>수정자</td>
+            <td>결제자</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="checkbox"></td>
+            <td>TC20240424170752</td>
+            <td>맹채슈퍼</td>
+            <td>결제대기</td>
+            <td>-</td>
+            <td>430,000</td>
+            <td>2024-04-24 17:07:52.0</td>
+            <td>김경민</td>
+            <td>2024-04-24 23:17:30.0</td>
+            <td>휴먼쌤</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input type="checkbox"></td>
+            <td>TC20240424113456</td>
+            <td>히연슈퍼</td>
+            <td>결제대기</td>
+            <td>-</td>
+            <td>500,000</td>
+            <td>2024-04-27 17:07:52.0</td>
+            <td>이정은</td>
+            <td>2024-04-01 23:17:30.0</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input type="checkbox"></td>
+            <td>TC20240424113456</td>
+            <td>령쓰슈퍼</td>
+            <td>결제진행</td>
+            <td>-</td>
+            <td>210,000</td>
+            <td>2024-05-01 17:07:52.0</td>
+            <td>김경민</td>
+            <td>2024-06-03 23:17:30.0</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table>
+</body>
+</html>

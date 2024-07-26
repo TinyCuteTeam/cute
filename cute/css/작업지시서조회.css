@@ -3,10 +3,14 @@ blue{
 }
 
 .mho:hover {
-    background-color: lightblue;
-    border: 1px solid lightblue;    
     padding: 5px 5px;
     border-radius: 3px;
+    text-decoration: underline;
+}
+
+.mho{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
 }
 
 .green{
@@ -36,10 +40,6 @@ blue{
 
 .mfont div{
     font-size: 15px;
-}
-
-div{
-    font-size: 14px;
 }
 
 .flex>div {
@@ -99,9 +99,14 @@ div{
 
 .mho:link {
     color: initial; /* 기본 링크 색상 */
-    text-decoration: none; /* 기본 밑줄 제거 */
 }
+
 .mho:visited {
     color: initial; /* 방문한 링크 색상 */
-    text-decoration: none; /* 방문한 링크 밑줄 제거 */
+}
+
+.over{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

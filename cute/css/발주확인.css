@@ -1,3 +1,7 @@
+.allrigth{
+    border: 1px solid red;
+}
+
 blue{
     color: blue;
 }
@@ -6,6 +10,11 @@ blue{
    padding: 5px 20px;
    font-weight: 700;
    border-radius: 5px;
+}
+
+.goodjob{
+    margin-top: 20px;
+    margin-left: 125px;
 }
 
 .mcontain{
@@ -21,6 +30,7 @@ blue{
     width: 800px;
     height: 50px;
     line-height: 50px;
+    margin-left: 130px;
 }
 
 .flex>div {
@@ -33,6 +43,7 @@ blue{
     border: 1px solid black;
     border-radius: 15px;
     margin-bottom: 30px;
+    margin-left: 120px;
 }
 
 .mbtn1 {
@@ -42,6 +53,7 @@ blue{
     font-weight: 800;
     border-radius: 20px;
     padding: 5px 30px;
+    margin-left: 110px;
     /* position: absolute;
     left: 100px; */
 }
@@ -85,4 +97,31 @@ mleft {
 
 .gun{
     display: none;
+}
+
+.m_pagination{
+    display: inline-block;
+    margin-left: 410px;
+}
+
+.m_pagination button {
+    border: 1px solid #e6e6e6;
+    background-color: #e6e6e6;
+    cursor: pointer; /* 버튼에 커서 모양 추가 */
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.m_pagination button.active {
+    font-weight: bold;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.2em; /* 원하는 크기로 조정 */
+}
+
+/* 버튼을 클릭했을 때의 스타일 */
+.m_pagination button:active {
+    font-weight: 700;
+    font-size: 1em; /* 원하는 크기로 조정 */
 }

@@ -1,7 +1,6 @@
 let mbtn11 = document.querySelector(".mbtn11");
 mbtn11.addEventListener("click", function(event) {
     let minfo1 = document.querySelector("#minfo1").value;
-    let minfo2 = document.querySelector("#minfo2").value;
     let minfo3 = document.querySelector("#minfo3").value;
     let minfo4 = document.querySelector("#minfo4").value;
     let minfo5 = document.querySelector("#minfo5").value;
@@ -9,7 +8,7 @@ mbtn11.addEventListener("click", function(event) {
     let minfo7 = document.querySelector("#minfo7").value;
     let mcontent = '';
 
-    if (minfo1 == '' || minfo2 == '' || minfo3 == '' || minfo4 == '' || minfo5 == '' || minfo6 == '' || minfo7 == '') {
+    if (minfo1 == '' || minfo3 == '' || minfo4 == '' || minfo5 == '' || minfo6 == '' || minfo7 == '') {
         alert("빈칸을 채워주세요");
     } else if (isNaN(minfo6)) {
         alert("수량은 숫자만 가능합니다");
@@ -18,10 +17,7 @@ mbtn11.addEventListener("click", function(event) {
     } else {
         mcontent += '<div class="flex round">';
         mcontent += '<div>';
-        mcontent += `    <blue class="mho">${minfo1}</blue>`;
-        mcontent += '</div>';
-        mcontent += '<div>';
-        mcontent += `   <blue>${minfo2}</blue>`;
+        mcontent += `    <blu class="mho">${minfo1}</blu>`;
         mcontent += '</div>';
         mcontent += `<div>${minfo3}</div>`;
         mcontent += `<div>${minfo4}</div>`;
