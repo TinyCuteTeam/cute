@@ -1,11 +1,4 @@
-/* 배경 */
-.sr_back {
-    /* background-color: grey; */
-    width: 1000px;
-}
-
-/* 거래처(회사명)만 파란글씨 */
-blue {
+﻿blue {
     color: blue;
 }
 
@@ -34,17 +27,34 @@ blue {
 
 /* 등록버튼 */
 .mbtn11 {
-    background-color: hsl(220, 91%, 74%);
+    background-color: #007bff;
     border: 1px solid black;
     border-radius: 20px;
     margin-left: 20px;
     width: 80px;
     height: 40px;
+    cursor: pointer;
 }
 
 .mbtn11:hover {
     /* 등록버튼에 마우스가 올라가면 색이 바뀜 */
     background-color: white;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #dc3545;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 80px;
+    height: 40px;
+    color: black;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
 }
 
 .mfont div {
@@ -53,4 +63,41 @@ blue {
 
 input[type="text"] {
     width: 100px;
+
+}
+
+.srEl {
+    /* width:150px; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* 자동 줄바꿈을 방지 */
+    overflow: hidden;
+}
+
+.content{
+    width: 1215px;
+    height:900px;
+    overflow:auto;
+    /* border: 1px solid black; */
+    margin-left:80px;
+    /* margin-right:20px; */
+}
+
+.headTitle{
+    display:inline-block;
+    margin-left:450px;
+}
+
+.flex.round {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center align items vertically */
+    padding: 10px;
+    width: 1000px; /* Adjust width as needed */
+    height: auto;
+    line-height: 50px;
+    font-size: 13px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 10px; /* Reduced margin for better spacing */
 }

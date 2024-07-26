@@ -1,0 +1,96 @@
+﻿        /*div 제목, 가운데 정렬*/
+        .srBack {
+            width: 1000px;
+            height: 50px;
+            text-align: center;
+        }
+
+        /* 배경 가운데정렬, 스크롤 */
+        .content {
+            width: 1215px;
+            height: 900px;
+            overflow: auto;
+            margin-left: 80px;
+        }
+
+        .srTop {
+            width: 1000px;
+            height: 48px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* 여기부터 */
+        #recipeSelect {
+            height: 48px;
+            padding: 5px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* 제품추가랑 선택삭제 동일한 스타일적용예정 */
+        .btnStyle {
+            padding: 13px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 15px;
+            background-color: #e6e6e6;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+
+        /* 플러스이미지(추가버튼) */
+        .plus {
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+        }
+
+        /* 김치만두, 고기만두 테이블에 적용되는 css */
+        .sr_bom {
+            width: 1000px;
+            border-collapse: collapse;
+            text-align: center;
+            height: 500px;
+            border:solid 1px #e6e6e6;
+        }
+
+        /* 휴지통이미지(삭제버튼) */
+        .bin {
+            width: 30px;
+            cursor: pointer;
+        }
+
+        /* 연필이미지(수정버튼) */
+        .pen {
+            width: 30px;
+            cursor: pointer;
+        }
+
+        /* 테이블헤드 색상, 크기 설정 */
+        .srTh {
+            background-color: #e6e6e6;
+            height: 50px;
+        }
+
+        .meat {
+            display: none;
+        }
+
+        /* a태그 밑줄 삭제 */
+        .mho:link {
+            color: initial;
+            /* 기본 링크 색상 */
+            text-decoration: none;
+            /* 기본 밑줄 제거 */
+        }
+
+        .mho:visited {
+            color: initial;
+            /* 방문한 링크 색상 */
+            text-decoration: none;
+            /* 방문한 링크 밑줄 제거 */
+        }

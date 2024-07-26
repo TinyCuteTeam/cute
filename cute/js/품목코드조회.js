@@ -1,3 +1,4 @@
+﻿// 기존에 작성되어 있는 table에 적용되는 이벤트
 //삭제 누르면 표 한줄이 삭제되도록 
 document.querySelectorAll(".delButton").forEach(function (button) {
     button.addEventListener('click', function (event) {
@@ -11,7 +12,6 @@ editButtons.forEach(function (button) {
         let tableRow = event.currentTarget.parentNode.parentNode;
         let cells = tableRow.querySelectorAll('td');
         let isEditing = button.classList.contains('editing');
-     
 
         if (isEditing) {
             // 저장 로직
@@ -21,7 +21,7 @@ editButtons.forEach(function (button) {
                     cells[i].textContent = inputField.value;
                 }
             }
-            button.querySelector('img').src = '/image/edit.png';
+            button.src = '/image/edit.png';
             button.classList.remove('editing');
         } else {
             // 수정 로직
@@ -34,7 +34,7 @@ editButtons.forEach(function (button) {
                 currentCell.textContent = '';
                 currentCell.appendChild(inputField);
             }
-            button.querySelector('img').src = '/image/save.webp';
+            button.src = '/image/save.webp';
             button.classList.add('editing');
         }
     });
@@ -57,8 +57,8 @@ document.querySelector('.addBtn').addEventListener('click', function () {
     // newRow.insertCell(2).innerHTML = `<input type="file" class="real-upload" accept="image/*" required multiple>`;
     // newRow.insertCell(2).innerHTML = `이미지`;
     // newRow.insertCell(2).innerHTML = `<img src=" ' +imageLink.vlaue + '" style="width:50px: height:50px;">`;
-    newRow.insertCell(3).innerHTML = `<button class="editButton"><img class="pen" src="/image/edit.png"></button>`;
-    newRow.insertCell(4).innerHTML = `<button class="delButton"><img class="bin" src="/image/delete.png"></button>`;
+    newRow.insertCell(3).innerHTML = `<img class="pen editButton" src="/image/edit.png" title="수정/저장">`;
+    newRow.insertCell(4).innerHTML = `<img class="bin delButton" src="/image/delete.png" title="삭제">`;
 
     document.getElementById('srForm').reset();
 
@@ -81,7 +81,7 @@ document.querySelector('.addBtn').addEventListener('click', function () {
                     cells[i].textContent = inputField.value;
                 }
             }
-            button.querySelector('img').src = '/image/edit.png';
+            button.src = '/image/edit.png';
             button.classList.remove('editing');
         } else {
             // 수정 로직
@@ -97,14 +97,11 @@ document.querySelector('.addBtn').addEventListener('click', function () {
                     inputField.value = currentValue;
                     currentCell.textContent = '';
                     currentCell.appendChild(inputField);
-                
             }
 
-            // let imageLink =inputField 
             cells[2].innerHTML += `<img src=" ' +imageLink.vlaue + '" style="width:50px: height:50px;">`
-            // cells[2].innerHTML += `<img src=" " style="width:50px: height:50px;">`
-            // newRow.insertCell(2).innerHTML = `<img src=" ' +imageLink.vlaue + '" style="width:50px: height:50px;">`;
-            button.querySelector('img').src = '/image/save.webp';
+            button.src = '/image/save.webp';
+
             button.classList.add('editing');
         }
     });

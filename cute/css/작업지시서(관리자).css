@@ -1,0 +1,80 @@
+.flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 10px;
+    width: 800px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.flex>div {
+    flex: 1;
+    text-align: center;
+    line-height: 50px;
+}
+
+.round {
+    /* border: 1px solid black; */
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.mbtn11 {
+    border: 1px solid rgb(55, 197, 240);
+    background-color: rgb(55, 197, 240);
+    color: black;
+    font-weight: 800;
+    border-radius: 20px;
+    padding: 5px 30px;
+    position: absolute;
+    left: 740px;
+}
+
+.mbtn11:hover {
+    background-color: white;
+}
+
+.mimg:hover {
+    color: red;
+}
+
+input[type="text"]{
+    width: 80px;
+    border: 1px solid #00ff0000;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.mfont div{
+    font-size: 15px;
+}
+
+
+
+
+.add{
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+/* .mho:hover {
+    background-color: lightblue;
+    border: 1px solid lightblue;    
+    padding: 5px 5px;
+    border-radius: 3px;
+} */
+
+.tooltip{
+    position: absolute;
+    top : 100px;
+    left: 150px;
+    display: none;
+}
+
+.make{
+    width: 500px;
+    height: 500px;
+}

@@ -1,65 +1,74 @@
-       /* 배경 */
-       .sr_grey {
-        width: 1000px;
-        height: 700px;
-    }
+﻿.sr_grey {
+           width: 1000px;
+           height: 100px;
+           text-align: center;
+       }
 
-    .sr_mandoo {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 50px;
-        width: 1000px;
-    }
+       /* 배경 가운데정렬, 스크롤 */
+       .content {
+           width: 1215px;
+           height: 900px;
+           overflow: auto;
+           margin-left: 80px;
+           /* margin-right:20px; */
+       }
 
-    #recipeSelect {
-        padding: 5px 20px;
-        font-weight: 700;
-        border-radius: 5px;
-    }
+       .sr_mandoo {
+           display: flex;
+           justify-content: space-between;
+           /* margin-right: 50px; */
+           width: 1000px;
+       }
 
-    /* 추가버튼 */
-    .addBtn {
-        border: 0px;
-        background-color: white;
-    }
+       #recipeSelect {
+           padding: 5px 20px;
+           font-weight: 700;
+           border-radius: 5px;
+       }
 
-    /* 플러스이미지 */
-    /* save 이미지로 변경 */
-    .save {
-        width: 30px;
-    }
+       /* 플러스이미지 */
+       /* save 이미지로 변경 */
+       .imgstyle {
+           width: 30px;
+           cursor: pointer;
+       }
 
-    .productInfo{
-        border-collapse: collapse;
-        width:40%;
-        text-align: center;
-    }
+       .productInfo {
+           border-collapse: collapse;
+           width: 40%;
+           text-align: center;
+       }
 
-    .ingreInfo{
-        border-collapse: collapse;
-        width:1000px;
-        text-align: center;
-    } 
-    
-    /* 테이블헤드 색상, 크기 설정 */
-    .srTh {
-        background-color: #e6e6e6;
-        height: 50px;
-    }
+       .ingreInfo {
+           border-collapse: collapse;
+           width: 1000px;
+           text-align: center;
+       }
 
-    .ingrebutt{
-        margin-top: 30px;
-        margin-bottom: 5px;
-        padding: 5px;
-        border: 1px solid black;
-        border-radius: 5px;
-    }
+       /* 테이블헤드 색상, 크기 설정 */
+       .srTh {
+           background-color: #e6e6e6;
+           height: 50px;
+       }
 
-    .mho:link {
-        color: initial; /* 기본 링크 색상 */
-        text-decoration: none; /* 기본 밑줄 제거 */
-    }
-    .mho:visited {
-        color: initial; /* .방문한 링크 색상 */
-        text-decoration: none; /* 방문한 링크 밑줄 제거 */
-    }
+       .ingrebutt {
+           margin-top: 30px;
+           margin-bottom: 5px;
+           padding: 5px;
+           border-radius: 5px;
+           cursor: pointer;
+       }
+
+       .mho:link {
+           color: initial;
+           /* 기본 링크 색상 */
+           text-decoration: none;
+           /* 기본 밑줄 제거 */
+       }
+
+       .mho:visited {
+           color: initial;
+           /* .방문한 링크 색상 */
+           text-decoration: none;
+           /* 방문한 링크 밑줄 제거 */
+       }
