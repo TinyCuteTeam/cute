@@ -27,7 +27,7 @@
 
 /* 등록버튼 */
 .mbtn11 {
-    background-color: #007bff;
+    background-color: #e6e6e6;
     border: 1px solid black;
     border-radius: 20px;
     margin-left: 20px;
@@ -38,12 +38,12 @@
 
 .mbtn11:hover {
     /* 등록버튼에 마우스가 올라가면 색이 바뀜 */
-    background-color: white;
+    background-color: #81b3e9;
 }
 
 /* Delete Button */
 .delete-btn {
-    background-color: #dc3545;
+    background-color: #e6e6e6;
     border: 1px solid black;
     border-radius: 20px;
     margin-left: 20px;
@@ -54,7 +54,8 @@
 }
 
 .delete-btn:hover {
-    background-color: #c82333;
+    background-color: #f38080;
+
 }
 
 .mfont div {

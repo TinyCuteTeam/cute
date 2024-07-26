@@ -40,11 +40,11 @@
         }
 
         .itemAdd:hover{
-            background-color: blue;
+            background-color: #81b3e9;
         }
 
         .delete-btn:hover {
-            background-color: #c82333;
+            background-color: #f38080;
         }
 
         /* 플러스이미지(추가버튼) */
