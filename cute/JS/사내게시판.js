@@ -24,3 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadPosts();
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
+    const id = document.getElementById("id");
+
+    if (userInfo) {
+        console.log(`로그인 사용자: ${userInfo.username}`);
+        // 사용자 이름을 페이지의 적절한 위치에 표시할 수 있습니다.
+        id.innerText = `${userInfo.username}님`;
+    } else {
+        console.log("사용자가 로그인하지 않았습니다.");
+    }
+
+});

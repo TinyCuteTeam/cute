@@ -8,7 +8,7 @@
         const title = document.getElementById("title").value;
         const content = document.getElementById("content").value.replace(/\n/g, "<br>");
         const date = new Date().toLocaleDateString();
-        const author = "익명"; // 글쓴이를 익명으로 설정, 필요시 사용자 입력 받도록 수정
+        const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
 
         let posts = JSON.parse(sessionStorage.getItem("posts")) || [];
         let newId = 1;
@@ -22,7 +22,7 @@
             category: category,
             title: title,
             date: date,
-            author: author,
+            author: userInfo.username,
             content: content
         };
 

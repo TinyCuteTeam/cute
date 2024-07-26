@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,21 @@
     <link rel="stylesheet" type="text/css" href="/CSS/로그인.css">
 
 </head>
+
 <body>
 
     <div class="square">
+
         <h1>Login</h1>
-        <input type="text" placeholder="사원번호" class="id"><br>
-        <input type="password" placeholder="비밀번호" class="password"><br>
-        <button id="showJoin">회원가입</button>
-        <button class="login">로그인</button>
+        <form id="login-form">
+            <input type="text" placeholder="사원번호" id="id"><br>
+            <input type="password" placeholder="비밀번호" id="password"><br>
+            <button id="showJoin">회원가입</button>
+            <button type="submit">로그인</button>
+        </form>
+
     </div>
-    
+
     <!-- 회원가입 모달 -->
     <div id="joinModal" class="modal">
         <div class="modal-content">
@@ -28,7 +34,8 @@
     </div>
 
     <script src="/JS/로그인.js"> </script>
-    
+
 
 </body>
+
 </html>

@@ -1,22 +1,21 @@
 ﻿<!DOCTYPE html>
-<html lang="kor">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandoo</title>
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/CSS/재고현황.css">
+    <link rel="stylesheet" href="/css/품질검사현황.css">
 </head>
 
 <body>
-
     <!-- 메인 -->
     <div class="category">
 
         <!-- 메뉴 아이콘 -->
         <div class="menu-icon">
-            <img class="menu-icon" src="/image/menu.png">
+            <img class="menu-icon" src="image/menu.png">
         </div>
 
         <!-- 로고 아이콘 -->
@@ -44,9 +43,9 @@
         </div>
 
         <div class="category-item">
-            <a href="/HTML/재고현황.html" class="category-link title">재고관리</a>
+            <a href="/HTML/재고현황.html" class="category-link">재고관리</a>
             <div class="_category">
-                <a href="/HTML/재고현황.html" class="category-link title">재고현황</a>
+                <a href="/HTML/재고현황.html" class="category-link">재고현황</a>
             </div>
         </div>
 
@@ -78,7 +77,7 @@
             <div class="_category">
                 <a href="/HTML/마이페이지.html" class="category-link ">마이페이지</a> <br>
                 <a href="/HTML/계정관리.html" class="category-link">계정관리</a><br>
-                <a href="/HTML/사내게시판.html "class="category-link">사내게시판</a><br>
+                <a href="/HTML/사내게시판.html " class="category-link">사내게시판</a><br>
             </div>
 
         </div>
@@ -88,47 +87,48 @@
     <!-- 사이드바 -->
     <div class="sidebar">
         <ul id="sidebar-content">
-            <li><a href="/HTML/BOM.html" class="category-link title">재고현황</a></li>
-
+            <li><a href="/HTML/불량률파악보고서.html" class="category-link title">불량률파악보고서</a></li>
         </ul>
     </div>
 
     <!-- 내용페이지  -->
     <div class="content">
-        <h1 style="text-align: center;">재고 현황</h1>
-
-        <div class=mtab style="text-align: center;">
-            <input type="text" id="item-code" placeholder="품목코드">
-            <input type="text" id="item-name" placeholder="품목명">
-            <input type="text" id="item-image" placeholder="이미지코드">
-            <input type="number" id="item-stock" placeholder="재고수량">
-            <input type="number" id="item-available" placeholder="가용수량">
-            <button id="add-item">등록</button>
-        </div>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th class="mth">품목코드</th>
-                    <th class="mth">품목명</th>
-                    <th class="mth">이미지</th>
-                    <th class="mth">재고수량</th>
-                    <th class="mth">가용수량</th>
-                    <th class="mth">수정</th>
-                    <th class="mth">삭제</th>
-                </tr>
-            </thead>
-            <tbody id="product-table-body">
-                <!-- JavaScript로 데이터가 추가될 부분 -->
-            </tbody>
-        </table>
-
-        <div class="pagination">
-            <!-- 페이지 버튼이 여기에 추가될 것입니다 -->
+        <div class="quality-table-container">
+            <h2 class="qualitytest">품질검사현황</h2>
+            <table id="qualityInspectionTable" class="quality-table">
+                <thead>
+                    <tr>
+                        <th class="qualwhat">검사방법</th>
+                        <th>전수</th>
+                    </tr>
+                    <tr>
+                        <th class="qualwhat">품목명[규격명]</th>
+                        <th>고기만두</th>
+                    </tr>
+                    <tr>
+                        <th class="qualwhat">시료</th>
+                        <th>100</th>
+                    </tr>
+                    <tr>
+                        <th class="qualwhat">적격</th>
+                        <th>95</th>
+                    </tr>
+                    <tr>
+                        <th class="qualwhat">부적격</th>
+                        <th>5</th>
+                    </tr>
+                    <tr>
+                        <th class="qualwhat">합격여부</th>
+                        <th>합격</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- JavaScript를 사용하여 데이터 추가 -->
+                </tbody>
+            </table>
         </div>
     </div>
-
-    <script src="/js/재고현황.js">
+    <script>
 
     </script>
 </body>

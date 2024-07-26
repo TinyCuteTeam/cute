@@ -1,22 +1,21 @@
 ﻿<!DOCTYPE html>
-<html lang="kor">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandoo</title>
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/CSS/재고현황.css">
+    <link rel="stylesheet" href="/css/불량률파악보고서.css">
 </head>
 
 <body>
-
     <!-- 메인 -->
     <div class="category">
 
         <!-- 메뉴 아이콘 -->
         <div class="menu-icon">
-            <img class="menu-icon" src="/image/menu.png">
+            <img class="menu-icon" src="image/menu.png">
         </div>
 
         <!-- 로고 아이콘 -->
@@ -44,9 +43,9 @@
         </div>
 
         <div class="category-item">
-            <a href="/HTML/재고현황.html" class="category-link title">재고관리</a>
+            <a href="/HTML/재고현황.html" class="category-link">재고관리</a>
             <div class="_category">
-                <a href="/HTML/재고현황.html" class="category-link title">재고현황</a>
+                <a href="/HTML/재고현황.html" class="category-link">재고현황</a>
             </div>
         </div>
 
@@ -88,49 +87,36 @@
     <!-- 사이드바 -->
     <div class="sidebar">
         <ul id="sidebar-content">
-            <li><a href="/HTML/BOM.html" class="category-link title">재고현황</a></li>
-
+            <li><a href="/HTML/불량률파악보고서.html" class="category-link title">불량률파악보고서</a></li>
         </ul>
     </div>
 
     <!-- 내용페이지  -->
     <div class="content">
-        <h1 style="text-align: center;">재고 현황</h1>
-
-        <div class=mtab style="text-align: center;">
-            <input type="text" id="item-code" placeholder="품목코드">
-            <input type="text" id="item-name" placeholder="품목명">
-            <input type="text" id="item-image" placeholder="이미지코드">
-            <input type="number" id="item-stock" placeholder="재고수량">
-            <input type="number" id="item-available" placeholder="가용수량">
-            <button id="add-item">등록</button>
+        <div class="defect-home">
+            <div class="defect-table-container">
+                <h2 class="defect">불량률 파악 보고서</h2>
+                <table id="defectReportTable" class="defect-table">
+                    <thead>
+                        <tr>
+                            <th>날짜</th>
+                            <th>에러코드</th>
+                            <th>작업지시번호</th>
+                            <th>생산수량</th>
+                            <th>불량수량</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JavaScript를 사용하여 데이터 추가 -->
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th class="mth">품목코드</th>
-                    <th class="mth">품목명</th>
-                    <th class="mth">이미지</th>
-                    <th class="mth">재고수량</th>
-                    <th class="mth">가용수량</th>
-                    <th class="mth">수정</th>
-                    <th class="mth">삭제</th>
-                </tr>
-            </thead>
-            <tbody id="product-table-body">
-                <!-- JavaScript로 데이터가 추가될 부분 -->
-            </tbody>
-        </table>
-
-        <div class="pagination">
-            <!-- 페이지 버튼이 여기에 추가될 것입니다 -->
-        </div>
+        <script src="/js/불량률파악보고서.js">
+            
+        </script>
     </div>
 
-    <script src="/js/재고현황.js">
-
-    </script>
 </body>
 
 </html>

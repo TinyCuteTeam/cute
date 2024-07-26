@@ -147,24 +147,6 @@ span {
     width: 1300px;
 }
 
-blue {
-    color: #0085FF;
-}
-
-
-.container {
-    width: 200px;
-    height: 700px;
-    background-color: #E6E6E6;
-    text-align: center;
-    line-height: 20px;
-}
-
-
-canvas {
-    width: 500px !important;
-    height: 400px !important;
-}
 
 /* styles.css */
 .sidebar li.active {
@@ -185,7 +167,9 @@ canvas {
 }
 
 
-.sidebar ul > li {
+.sidebar ul>li {
     padding-bottom: 10px;
 }
+
+
 
